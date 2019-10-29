@@ -1,0 +1,31 @@
+$baseFontSize: 16;
+@function rem($pixels, $context: $baseFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+@mixin custom-scroll-bar() {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: #b8d1e6;
+
+    &:hover {
+      background-color: #73b2e6;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #e9eff5;
+  }
+}
