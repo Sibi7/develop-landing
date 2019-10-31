@@ -1,0 +1,78 @@
+.about {
+  position: relative;
+  padding-top: 100px;
+
+  &__dots {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 400px;
+    height: 265px;
+    background: url("./../img/dots.png");
+    background-size: contain;
+    opacity: 0.3;
+  }
+
+  &__title {
+    padding-bottom: 60px;
+    font-family: 'MullerExtraBold', serif;
+    font-size: 60px;
+    span {
+      display: block;
+      font-family: 'MullerRegular', serif;
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+    strong {
+      font-family: 'MullerExtraBold', serif;
+    }
+  }
+  &__desc {
+    margin-bottom: 91px;
+    max-width: 910px;
+    font-family: 'MullerLight', serif;
+    font-size: 24px;
+    strong {
+      font-family: 'MullerExtraBold', serif;
+    }
+  }
+
+  &__skills {
+    display: grid;
+    grid-template: 'a a a a b b b b'
+                   'c c c c d d d d'
+                   'e e e e e e e e'
+                   'f f f f f f f f'
+                   'g g g h h h h h'
+                   'i i i i i i i i'
+                   'j j j j j j j j'
+                   'k k k k k k k k';
+    &_title {
+      margin-bottom: 45px;
+      font-family: 'MullerExtraBold', serif;
+      font-size: 21px;
+    }
+    &_block {
+      margin-bottom: 85px;
+      $list: a b c d e f g h i j k;
+      @each $letter in $list {
+        $i: index($list, $letter);
+        &:nth-of-type(#{$i}) {
+          grid-area: $letter;
+        }
+      }
+    }
+  }
+  &__brands {
+    display: flex;
+  }
+  &__brand {
+    max-width: 180px;
+    text-align: center;
+    font-family: 'MullerMedium', serif;
+    font-size: 18px;
+    &:not(:last-of-type) {
+      margin-right: 30px;
+    }
+  }
+}
