@@ -1,8 +1,10 @@
 @import "_color-var";
 @import "_libs";
 @import "_mixins/mixins";
+@import "_fonts";
 @import "_header";
 @import "_footer";
+@import "_menu";
 
 ::placeholder {
   color: #666;
