@@ -6,6 +6,7 @@
 @import "_footer";
 @import "_menu";
 @import "_about";
+@import "_order";
 
 ::placeholder {
   color: #666;
@@ -41,6 +42,9 @@ b, strong {
 }
 a:hover{
   text-decoration: none;
+}
+button {
+  cursor: pointer;
 }
 
 .img-responsive {

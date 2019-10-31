@@ -64,7 +64,7 @@
       line-height: 65px;
     }
     strong {
-      color: #d6ef2c;
+      color: var(--yellow);
       font-family: 'MullerExtraBold', serif;
     }
     span {
@@ -127,7 +127,7 @@
       font-size: 16px;
       font-weight: 700;
       text-transform: uppercase;
-      color: #d6ef2c;
+      color: var(--yellow);
       background-color: #1c1a1c;
       cursor: pointer;
       transition: .4s;
@@ -161,7 +161,7 @@
       font-family: 'MullerMedium', serif;
       strong {
         font-family: 'MullerExtraBold', serif;
-        color: #d6ef2c;
+        color: var(--yellow);
       }
     }
     &_desc {
