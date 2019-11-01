@@ -7,13 +7,14 @@
 @import "_menu";
 @import "_about";
 @import "_order";
+@import "_reviews";
 
 ::placeholder {
   color: #666;
 }
 
 ::selection {
-  background-color: #fff;
+  background-color: var(--yellow);
   color: #fff;
 }
 
