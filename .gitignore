@@ -6,3 +6,5 @@
 /**/package-lock.json
 /**/Thumbs.db
 /**/*.DS_Store
+/css
+/js/script.min.js
