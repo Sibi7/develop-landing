@@ -1,7 +1,10 @@
 .order {
+  position: relative;
   padding: 120px 0;
   color: #fff;
-  background-color: #000;
+  background: url("../img/order-bg.png") center center no-repeat;
+  background-size: cover;
+  overflow: hidden;
 
   &__title {
     margin-bottom: 32px;
@@ -106,5 +109,11 @@
         font-weight: 900;
       }
     }
+  }
+
+  &__clock {
+    height: 520px;
+    position: absolute;
+    right: -80px;
   }
 }

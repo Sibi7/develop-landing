@@ -1,6 +1,8 @@
 .about {
   position: relative;
   padding-top: 100px;
+  background: url(../img/mountains-bg.png) no-repeat right 60%;
+  padding-bottom: 77px;
 
   &__dots {
     position: absolute;
@@ -73,6 +75,13 @@
     font-size: 18px;
     &:not(:last-of-type) {
       margin-right: 30px;
+    }
+
+    img {
+      margin-bottom: 15px;
+      height: 65px;
+      max-width: 120px;
+      object-fit: contain;
     }
   }
 }

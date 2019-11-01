@@ -1,7 +1,8 @@
 @import "_vars";
 
 .header {
-  background-color: #000;
+  background: url('../img/header-bg.png') center center no-repeat;
+  background-size: cover;
   padding-bottom: 77px;
 
   &__contacts {
