@@ -1,0 +1,109 @@
+.stages {
+  padding: 120px 0;
+  position: relative;
+
+  &__title {
+    margin-bottom: 70px;
+    font-family: 'MullerExtraBold', serif;
+    font-size: 60px;
+    letter-spacing: 1.5px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  &__item {
+    position: relative;
+    margin-bottom: 70px;
+    padding: 0 30px;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &:before {
+      z-index: -1;
+      content: '';
+      display: block;
+      position: absolute;
+    }
+
+    &:nth-of-type(1),
+    &:nth-of-type(2),
+    &:nth-of-type(7),
+    &:nth-of-type(8) {
+      &:before {
+        top: 55px;
+        left: 80%;
+        height: 10px;
+        width: 140px;
+        background: url('../img/stages/arrow-sm-to-right.png');
+        background-size: 100%;
+      }
+    }
+
+    &:nth-of-type(3) {
+      &:before {
+        top: 55px;
+        left: 80%;
+        height: 420px;
+        width: 120px;
+        background: url('../img/stages/arrow-down-right.png') no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &:nth-of-type(5),
+    &:nth-of-type(6) {
+      &:before {
+        top: 55px;
+        left: -20%;
+        height: 10px;
+        width: 140px;
+        background: url('../img/stages/arrow-sm-to-left.png');
+        background-size: 100%;
+      }
+    }
+
+    &:nth-of-type(4) {
+      &:before {
+        top: 55px;
+        left: -20%;
+        height: 425px;
+        width: 120px;
+        background: url('../img/stages/arrow-down-left.png') no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &:nth-of-type(9) {
+      &:before {
+        top: 55px;
+        left: -20%;
+        height: 425px;
+        width: 500px;
+        background: url('../img/stages/arrow-down-right-big.png') no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &_icon {
+      margin-bottom: 30px;
+      width: 123px;
+      height: 147px;
+    }
+    &_title {
+      font-family: 'MullerExtraBold', serif;
+      font-size: 27px;
+      margin-bottom: 20px;
+    }
+    &_desc {
+      font-family: 'MullerRegular', serif;
+      font-size: 16px;
+      letter-spacing: 0.9px;
+    }
+  }
+
+}
