@@ -1,26 +1,41 @@
 .reviews {
+  position: relative;
   &__title {
-    font-size: rem(60);
+    font-size: 60px;
     font-family: 'MullerExtraBold', serif;
+    letter-spacing: 1.5px;
   }
 
   &__subtitle {
-    font-size: rem(24);
+    font-size: 24px;
+    font-family: 'MullerRegular', serif;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
   }
 
   &__wrap {
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   &__item {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 31.33%;
+    margin-top: rem(150);
+    padding: rem(100) rem(40) rem(40) rem(40);
+    text-align: center;
+    box-shadow: 0 0 95px rgba(60, 60, 60, 0.12);
   }
 
   &__photo {
-    position: relative;
+    position: absolute;
+    top: rem(-82.5);
     height: rem(165);
     width: rem(165);
-
     img {
       border-radius: 100%;
       overflow: hidden;
@@ -36,19 +51,32 @@
       width: rem(45);
       right: 0;
       border-radius: 50%;
-      background: var(--yellow);
+      background: url('../img/icons/quotes.png') no-repeat center;
+      background-size: contain;
     }
   }
 
   &__name {
-
+    color: #262626;
+    font-family: "MullerExtraBold", serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
   }
 
   &__position {
-
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    line-height: 24px;
   }
 
   &__desk {
-
+    font-family: "MullerLight", serif;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    line-height: 24px;
+    font-size: rem(14);
+    margin-top: rem(40);
   }
 }
