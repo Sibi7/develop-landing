@@ -1,0 +1,118 @@
+.projects {
+  position: relative;
+  overflow: hidden;
+  padding: 140px 0;
+
+  .container {
+    position: relative;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 40px;
+    font-family: 'MullerExtraBold', serif;
+    font-size: 60px;
+    letter-spacing: 1.5px;
+  }
+
+  &__slider {
+    position: relative;
+    width: 680px;
+    border: 1px solid #ccc;
+    box-shadow: -150px -150px 80px -5px #eee;
+    border-radius: 5px;
+    background: #fff;
+    &_pagination-info {
+      position: absolute;
+      top: 60px;
+      right: 60px;
+    }
+  }
+  &__slide {
+    &_body, &_footer {
+      padding: 25px 35px;
+    }
+    &_head, &_body {
+      border-bottom: 1px solid #ccc;
+    }
+    &_head {
+      padding: 25px 155px 25px 35px;
+    }
+    &_title {
+      font-family: 'MullerExtraBold', serif;
+      font-size: 30px;
+    }
+    &_subtitle {
+      margin-bottom: 0;
+      font-family: 'MullerRegular', serif;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+    &_body {
+      &_title {
+        margin-bottom: 10px;
+        font-family: 'MullerExtraBold', serif;
+        font-size: 24px;
+      }
+      &_text {
+        margin-bottom: 20px;
+        font-family: 'MullerLight', serif;
+        font-size: 16px;
+      }
+    }
+    &_footer {
+      display: flex;
+      align-items: center;
+      &_title {
+        margin-right: 50px;
+        max-width: 200px;
+        font-family: 'MullerExtraBold', serif;
+        font-size: 24px;
+        line-height: 23px;
+      }
+      &_icon {
+        margin: 0 10px;
+      }
+    }
+  }
+
+  &__laptop {
+    position: absolute;
+    z-index: -1;
+    top: -30px;
+    right: -400px;
+  }
+  &__ipad {
+    position: absolute;
+    bottom: -140px;
+    right: -220px;
+  }
+
+  &__next, &__prev {
+    position: absolute;
+    z-index: 2;
+    right: -30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    background-color: #a9a9a9;
+    border-radius: 50%;
+    border: none;
+    transition: .4s;
+    &:hover {
+      box-shadow: 0 0 54px rgba(1, 1, 1, 0.3);
+    }
+  }
+  &__next {
+    top: 38px;
+  }
+  //&__prev {
+  //  right: -30px;
+  //  img {
+  //    transform: rotate(180deg);
+  //  }
+  //}
+}

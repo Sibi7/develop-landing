@@ -1,18 +1,26 @@
 .about {
   position: relative;
+  overflow: hidden;
   padding-top: 100px;
   background: url(../img/mountains-bg.png) no-repeat right 60%;
   padding-bottom: 77px;
 
+  .container {
+    position: relative;
+  }
+
   &__dots {
     position: absolute;
     top: 80px;
-    right: 0;
-    width: 400px;
+    left: 90%;
+    width: 1000px;
     height: 265px;
-    background: url("./../img/dots.png");
+    background: url("./../img/dots.png") center center;
     background-size: contain;
     opacity: 0.3;
+    @include media-breakpoint-down(lg) {
+      left: 100%;
+    }
   }
 
   &__title {
@@ -49,10 +57,24 @@
                    'i i i i i i i i'
                    'j j j j j j j j'
                    'k k k k k k k k';
+    @include media-breakpoint-down(lg) {
+      grid-template: 'a a a a a b b b'
+                    'c c c c c c c c'
+                    'd d d d d d d d'
+                    'e e e e e e e e'
+                    'f f f f f f f f'
+                    'g g g h h h h h'
+                    'i i i i i i i i'
+                    'j j j j j j j j'
+                    'k k k k k k k k';
+    }
     &_title {
       margin-bottom: 45px;
       font-family: 'MullerExtraBold', serif;
       font-size: 21px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 20px;
+      }
     }
     &_block {
       margin-bottom: 85px;
@@ -62,6 +84,9 @@
         &:nth-of-type(#{$i}) {
           grid-area: $letter;
         }
+      }
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 30px;
       }
     }
   }
