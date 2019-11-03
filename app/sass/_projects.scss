@@ -1,7 +1,7 @@
 .projects {
   position: relative;
-  margin-top: 140px;
-  margin-bottom: 130px;
+  overflow: hidden;
+  padding: 140px 0;
 
   .container {
     position: relative;
@@ -82,6 +82,11 @@
     z-index: -1;
     top: -30px;
     right: -400px;
+  }
+  &__ipad {
+    position: absolute;
+    bottom: -140px;
+    right: -220px;
   }
 
   &__next, &__prev {

@@ -6,6 +6,10 @@
   background-size: cover;
   overflow: hidden;
 
+  .container {
+    position: relative;
+  }
+
   &__title {
     margin-bottom: 32px;
     font-family: 'MullerExtraBold', serif;
@@ -114,6 +118,9 @@
   &__clock {
     height: 520px;
     position: absolute;
-    right: -80px;
+    left: 80%;
+    @include media-breakpoint-down(lg) {
+
+    }
   }
 }

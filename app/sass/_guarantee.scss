@@ -1,7 +1,10 @@
 .guarantee {
+  padding: 40px 0;
+  overflow: hidden;
   position: relative;
   color: #fff;
   background: url('../img/guarantee-bg.png') no-repeat left center;
+  background-size: 60% 600px;
 
   .container {
     display: flex;
