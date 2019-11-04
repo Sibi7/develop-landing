@@ -71,7 +71,7 @@
                     <img src="img/icons/phone2.png" alt="phone">
                     <span>+7 727 <strong>727  72 72</strong></span>
                 </span>
-                <button class="header__phones_btn">Заказать обратный звонок</button>
+                <button class="header__phones_btn open-modal-btn" data-modal="request">Заказать обратный звонок</button>
             </div>
         </div>
 
@@ -113,7 +113,6 @@
 
     </div>
 </header>
-<div class="overlay"></div>
 
 <!-- end header.html-->
 
@@ -795,6 +794,38 @@
 <!-- start footer.html-->
 
 <!-- end footer.html-->
+
+<!-- start modals.html-->
+<div class="modal modal-request">
+    <h2 class="modal__title">Оставьте заявку на <strong>бесплатную консультацию</strong></h2>
+    <p class="modal__subtitle">и получите конкретную стратегию привлечения клиентов под ваш бюджет</p>
+    <form class="modal-request__form">
+        <label><input type="text" placeholder="Ваше имя" class="modal-request__name"></label>
+        <label><input type="tel" placeholder="Номер телефона" class="modal-request__phone"></label>
+        <button class="modal__submit">Заказать</button>
+    </form>
+    <span class="modal__terms">
+        Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с
+        <a href="#">Пользовательским соглашением</a>
+    </span>
+</div>
+
+<div class="modal modal-question">
+    <h2 class="modal__title">Хотите <strong>задать вопрос?</strong></h2>
+    <p class="modal__subtitle">Заполните поля и получите развернутый ответ от наших специалистов</p>
+    <form class="modal-question__form">
+        <label><input type="text" placeholder="Ваше имя" class="modal-question__name"></label>
+        <label><input type="text" placeholder="Номер телефона" class="modal-question__phone"></label>
+        <label><input type="text" placeholder="Ваш вопрос" class="modal-question__text"></label>
+        <button class="modal__submit">Задать вопрос</button>
+    </form>
+    <span class="modal__terms">
+        Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с
+        <a href="#">Пользовательским соглашением</a>
+    </span>
+</div>
+
+<!-- end modals.html-->
 
 <!-- start html_close.html-->
 

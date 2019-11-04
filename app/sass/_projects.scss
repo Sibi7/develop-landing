@@ -175,29 +175,23 @@
     }
   }
 
-  &__laptop {
+  &__tech {
     position: absolute;
     z-index: -1;
     top: -123px;
     left: 615px;
-      @include media-breakpoint-down(md) {
-        left: 0;
-        top: 100px;
-        z-index: 2;
-        width: 300px;
-      }
-  }
-  &__ipad {
-    position: absolute;
-    bottom: -148px;
-    left: 1017px;
-      @include media-breakpoint-down(md) {
-        left: 0;
-        z-index: 2;
-        width: 100px;
-        bottom: auto;
-        top: 200px;
-      }
+    @include media-breakpoint-down(lg) {
+      left: 450px;
+    }
+    @include media-breakpoint-down(md) {
+      left: 50%;
+      top: 65px;
+      z-index: 2;
+      width: 500px;
+      height: 460px;
+      transform: translate(-50%);
+      object-fit: contain;
+    }
   }
 
   &__next {
