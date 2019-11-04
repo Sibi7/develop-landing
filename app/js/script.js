@@ -77,10 +77,25 @@ function hideModal() {
     $('.modal').removeClass('modal--visible')
 }
 
+function tabs() {
+    $('body').on('click', '.cost-services__tab-nav a', function () {
+        $('.cost-services__tab-nav a').removeClass('active');
+        $(this).addClass('active');
+        var href = $(this).attr('href');
+        $('.cost-services__tab-pane').removeClass('active').removeClass('in');
+        $(href).addClass('active');
+        setTimeout(function () {
+            $(href).addClass('in');
+        }, 200);
+        return false;
+    });
+}
+
 $(function () {
     projectsSliderInit();
     mobileMenuInit();
     showMoreClientsInit();
     overlayClickInit();
     showModalInit();
+    tabs();
 });
