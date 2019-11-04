@@ -39,13 +39,20 @@
 
 <!-- start menu.html-->
 <nav class="menu">
-        <img src="/img/logo-white.png" alt="logo" class="menu__logo">
-        <a href="#" class="menu__link">Главная</a>
-        <a href="#" class="menu__link">Услуги</a>
-        <a href="#" class="menu__link">Портфолио</a>
-        <a href="#" class="menu__link">Отзывы</a>
-        <a href="#" class="menu__link">Стоимость</a>
-        <a href="#" class="menu__link">Преимущества</a>
+    <img src="/img/logo-white.png" alt="logo" class="menu__logo_mobile">
+    <div class="menu__wrap">
+        <div class="menu__wrap_block">
+            <img src="/img/logo-white.png" alt="logo" class="menu__logo">
+            <a href="#" class="menu__link">Главная</a>
+            <a href="#" class="menu__link">Услуги</a>
+            <a href="#" class="menu__link">Портфолио</a>
+            <a href="#" class="menu__link">Отзывы</a>
+            <a href="#" class="menu__link">Стоимость</a>
+            <a href="#" class="menu__link">Преимущества</a>
+            <button class="menu__close"></button>
+        </div>
+    </div>
+    <button class="menu__btn"><span></span></button>
 </nav>
 
 <!-- end menu.html-->
@@ -215,12 +222,12 @@
                         <figcaption>CSS-3</figcaption>
                     </figure>
                     <figure class="about__brand">
-                        <img src="img/frontend/3.png" alt="brand">
-                        <figcaption>Bootstrap-4</figcaption>
-                    </figure>
-                    <figure class="about__brand">
                         <img src="img/frontend/4.png" alt="brand">
                         <figcaption>Zeplin</figcaption>
+                    </figure>
+                    <figure class="about__brand">
+                        <img src="img/frontend/3.png" alt="brand">
+                        <figcaption>Bootstrap-4</figcaption>
                     </figure>
                     <figure class="about__brand">
                         <img src="img/frontend/5.png" alt="brand">
@@ -358,6 +365,8 @@
             </span>
         </form>
 
+        <img src="/img/clock-dots.png" alt="clock" class="order__clock-mobile">
+
         <div class="order__money">
             <span class="order__money_text">
                 <span class="order__money_text--colored">Деньги,</span> которые Вы <span class="order__money_text--colored">теряете</span>
@@ -377,53 +386,73 @@
         <div class="stages__list">
             <div class="stages__item">
                 <img src="/img/stages/stages-1.png" alt="stage icon" class="stages__item_icon">
-                <h3 class="stages__item_title">Заполнение брифа</h3>
-                <p class="stages__item_desc">Знакомство с вашим бизнесом,выявление потребности, выработка необходимого решения</p>
+                <div class="stages__item_wrap">
+                    <h3 class="stages__item_title">Заполнение брифа</h3>
+                    <p class="stages__item_desc">Знакомство с вашим бизнесом,выявление потребности, выработка необходимого решения</p>
+                </div>
             </div>
             <div class="stages__item">
                 <img src="/img/stages/stages-2.png" alt="stage icon" class="stages__item_icon">
-                <h3 class="stages__item_title">Подписание договора</h3>
-                <p class="stages__item_desc">Создание черно-белого макета сайта, для полного понятия о том как будет выглядеть будущий сайт</p>
+                <div class="stages__item_wrap">
+                    <h3 class="stages__item_title">Подписание договора</h3>
+                    <p class="stages__item_desc">Создание черно-белого макета сайта, для полного понятия о том как будет выглядеть будущий сайт</p>
+                </div>
             </div>
             <div class="stages__item">
                 <img src="/img/stages/stages-3.png" alt="stage icon" class="stages__item_icon">
-                <h3 class="stages__item_title">Оплата счета</h3>
-                <p class="stages__item_desc">Проанализируем всех Казахстанских конкурентов, а так же из стран СНГ</p>
+                <div class="stages__item_wrap">
+                    <h3 class="stages__item_title">Оплата счета</h3>
+                    <p class="stages__item_desc">Проанализируем всех Казахстанских конкурентов, а так же из стран СНГ</p>
+                </div>
             </div>
             <div class="stages__item">
                 <img src="/img/stages/stages-6.png" alt="stage icon" class="stages__item_icon">
-                <h3 class="stages__item_title">Разработка дизайна</h3>
-                <p class="stages__item_desc">Знакомство с вашим бизнесом,выявление потребности, выработка необходимого решения</p>
+                <div class="stages__item_wrap">
+                    <h3 class="stages__item_title">Разработка дизайна</h3>
+                    <p class="stages__item_desc">Знакомство с вашим бизнесом,выявление потребности, выработка необходимого решения</p>
+                </div>
             </div>
             <div class="stages__item">
                 <img src="/img/stages/stages-5.png" alt="stage icon" class="stages__item_icon">
-                <h3 class="stages__item_title">Копирайтинг</h3>
-                <p class="stages__item_desc">Создание черно-белого макета сайта, для полного понятия о том как будет выглядеть будущий сайт</p>
+                <div class="stages__item_wrap">
+                    <h3 class="stages__item_title">Копирайтинг</h3>
+                    <p class="stages__item_desc">Создание черно-белого макета сайта, для полного понятия о том как будет выглядеть будущий сайт</p>
+                </div>
             </div>
             <div class="stages__item">
                 <img src="/img/stages/stages-3.png" alt="stage icon" class="stages__item_icon">
-                <h3 class="stages__item_title">Разработка прототипа</h3>
-                <p class="stages__item_desc">Проанализируем всех Казахстанских конкурентов, а так же из стран СНГ</p>
+                <div class="stages__item_wrap">
+                    <h3 class="stages__item_title">Разработка прототипа</h3>
+                    <p class="stages__item_desc">Проанализируем всех Казахстанских конкурентов, а так же из стран СНГ</p>
+                </div>
             </div>
             <div class="stages__item">
                 <img src="/img/stages/stages-7.png" alt="stage icon" class="stages__item_icon">
-                <h3 class="stages__item_title">Адаптивная верстка</h3>
-                <p class="stages__item_desc">Знакомство с вашим бизнесом,выявление потребности, выработка необходимого решения</p>
+                <div class="stages__item_wrap">
+                    <h3 class="stages__item_title">Адаптивная верстка</h3>
+                    <p class="stages__item_desc">Знакомство с вашим бизнесом,выявление потребности, выработка необходимого решения</p>
+                </div>
             </div>
             <div class="stages__item">
                 <img src="/img/stages/stages-8.png" alt="stage icon" class="stages__item_icon">
-                <h3 class="stages__item_title">Программирование</h3>
-                <p class="stages__item_desc">Создание черно-белого макета сайта, для полного понятия о том как будет выглядеть будущий сайт</p>
+                <div class="stages__item_wrap">
+                    <h3 class="stages__item_title">Программирование</h3>
+                    <p class="stages__item_desc">Создание черно-белого макета сайта, для полного понятия о том как будет выглядеть будущий сайт</p>
+                </div>
             </div>
             <div class="stages__item">
                 <img src="/img/stages/stages-9.png" alt="stage icon" class="stages__item_icon">
-                <h3 class="stages__item_title">Наполнение сайта</h3>
-                <p class="stages__item_desc">Проанализируем всех Казахстанских конкурентов, а так же из стран СНГ</p>
+                <div class="stages__item_wrap">
+                    <h3 class="stages__item_title">Наполнение сайта</h3>
+                    <p class="stages__item_desc">Проанализируем всех Казахстанских конкурентов, а так же из стран СНГ</p>
+                </div>
             </div>
             <div class="stages__item">
                 <img src="/img/stages/stages-10.png" alt="stage icon" class="stages__item_icon">
-                <h3 class="stages__item_title">Тестирование и сдача проекта</h3>
-                <p class="stages__item_desc">Проанализируем всех Казахстанских конкурентов, а так же из стран СНГ</p>
+                <div class="stages__item_wrap">
+                    <h3 class="stages__item_title">Тестирование и сдача проекта</h3>
+                    <p class="stages__item_desc">Проанализируем всех Казахстанских конкурентов, а так же из стран СНГ</p>
+                </div>
             </div>
         </div>
     </div>
@@ -433,8 +462,8 @@
 
 <!-- start rock.html-->
 <section class="rock">
-    <img src="/img/lighting.png" alt="lighting" class="rock__lighting">
     <div class="container">
+        <img src="/img/lighting.png" alt="lighting" class="rock__lighting">
         <h2 class="rock__title">Мы - Rock-Marketing</h2>
         <p class="rock__subtitle">Digital-Агентство <strong>из Алматы</strong></p>
         <p class="rock__desc">Работаем <strong>с 2012 года</strong> на рынках Казахстана, России и Украины</p>
@@ -492,7 +521,7 @@
             <label><input type="text" placeholder="Ваше имя"></label>
             <label><input type="email" placeholder="E-mail"></label>
             <label><input type="tel" placeholder="Номер телефона"></label>
-            <label><textarea rows="5" placeholder="Особые пожелания"></textarea></label>
+            <label><textarea placeholder="Особые пожелания"></textarea></label>
             <span class="guarantee__form_terms">
                 Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с
                 <a href="#">Пользовательским соглашением</a>
@@ -509,7 +538,7 @@
     <div class="container">
         <h2 class="clients__title">Клиенты</h2>
         <p class="clients__subtitle">с которыми мы работаем</p>
-        <div class="clients__list">
+        <div class="clients__list clients--hidden">
             <div class="clients__logo"><img src="/img/clients/client-1.png" alt="client logo"></div>
             <div class="clients__logo"><img src="/img/clients/client-2.png" alt="client logo"></div>
             <div class="clients__logo"><img src="/img/clients/client-3.png" alt="client logo"></div>
@@ -546,6 +575,7 @@
             <div class="clients__logo"><img src="/img/clients/client-34.png" alt="client logo"></div>
             <div class="clients__logo"><img src="/img/clients/client-35.png" alt="client logo"></div>
         </div>
+        <button class="clients__show-more">Загрузить еще</button>
     </div>
 </section>
 
@@ -554,185 +584,90 @@
 <!-- start projects.html-->
 <section class="projects">
     <div class="container">
-        <h2 class="projects__title">Реализованные проекты</h2>
-        <div class="projects__slider">
+        <div class="projects__common">
+            <h2 class="projects__title">Реализованные проекты</h2>
             <span class="projects__slider_pagination-info"><strong></strong> / <span></span></span>
-<!--            <button class="projects__prev"><img src="/img/icons/arrow-to-right.png" alt="arrow"></button>-->
-            <div class="projects__slides">
-                <div class="projects__slide">
-                    <div class="projects__slide_head">
-                        <h3 class="projects__slide_title">Ип престиж</h3>
-                        <p class="projects__slide_subtitle">Обучение преподавателей</p>
-                    </div>
-                    <div class="projects__slide_body">
-                        <h4 class="projects__slide_body_title">Задача</h4>
-                        <p class="projects__slide_body_text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.
-                        </p>
-                        <h4 class="projects__slide_body_title">Решение</h4>
-                        <p class="projects__slide_body_text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit
-                        </p>
-                        <h4 class="projects__slide_body_title">Достигнутый результат</h4>
-                        <p class="projects__slide_body_text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.
-                        </p>
-                    </div>
-                    <div class="projects__slide_footer">
-                        <h4 class="projects__slide_footer_title">Используемые технологии</h4>
-                        <img src="/img/icons/projects-icon-1.png" alt="technologies icon" class="projects__slide_footer_icon">
-                        <img src="/img/icons/projects-icon-2.png" alt="technologies icon" class="projects__slide_footer_icon">
-                        <img src="/img/icons/projects-icon-3.png" alt="technologies icon" class="projects__slide_footer_icon">
-                        <img src="/img/icons/projects-icon-4.png" alt="technologies icon" class="projects__slide_footer_icon">
-                    </div>
-                </div>
-                <div class="projects__slide">
-                    <div class="projects__slide_head">
-                        <h3 class="projects__slide_title">Ип престиж</h3>
-                        <p class="projects__slide_subtitle">Обучение преподавателей</p>
-                    </div>
-                    <div class="projects__slide_body">
-                        <h4 class="projects__slide_body_title">Задача</h4>
-                        <p class="projects__slide_body_text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.
-                        </p>
-                        <h4 class="projects__slide_body_title">Решение</h4>
-                        <p class="projects__slide_body_text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit
-                        </p>
-                        <h4 class="projects__slide_body_title">Достигнутый результат</h4>
-                        <p class="projects__slide_body_text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.
-                        </p>
-                    </div>
-                    <div class="projects__slide_footer">
-                        <h4 class="projects__slide_footer_title">Используемые технологии</h4>
-                        <img src="/img/icons/projects-icon-1.png" alt="technologies icon" class="projects__slide_footer_icon">
-                        <img src="/img/icons/projects-icon-2.png" alt="technologies icon" class="projects__slide_footer_icon">
-                        <img src="/img/icons/projects-icon-3.png" alt="technologies icon" class="projects__slide_footer_icon">
-                        <img src="/img/icons/projects-icon-4.png" alt="technologies icon" class="projects__slide_footer_icon">
-                    </div>
-                </div>
-                <div class="projects__slide">
-                    <div class="projects__slide_head">
-                        <h3 class="projects__slide_title">Ип престиж</h3>
-                        <p class="projects__slide_subtitle">Обучение преподавателей</p>
-                    </div>
-                    <div class="projects__slide_body">
-                        <h4 class="projects__slide_body_title">Задача</h4>
-                        <p class="projects__slide_body_text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.
-                        </p>
-                        <h4 class="projects__slide_body_title">Решение</h4>
-                        <p class="projects__slide_body_text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit
-                        </p>
-                        <h4 class="projects__slide_body_title">Достигнутый результат</h4>
-                        <p class="projects__slide_body_text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.
-                        </p>
-                    </div>
-                    <div class="projects__slide_footer">
-                        <h4 class="projects__slide_footer_title">Используемые технологии</h4>
-                        <img src="/img/icons/projects-icon-1.png" alt="technologies icon" class="projects__slide_footer_icon">
-                        <img src="/img/icons/projects-icon-2.png" alt="technologies icon" class="projects__slide_footer_icon">
-                        <img src="/img/icons/projects-icon-3.png" alt="technologies icon" class="projects__slide_footer_icon">
-                        <img src="/img/icons/projects-icon-4.png" alt="technologies icon" class="projects__slide_footer_icon">
-                    </div>
-                </div>
-            </div>
             <button class="projects__next"><img src="/img/icons/arrow-to-right.png" alt="arrow"></button>
         </div>
-        <img src="/img/laptop.png" alt="laptop" class="projects__laptop">
-        <img src="/img/ipad.png" alt="ipad" class="projects__ipad">
+    </div>
+
+    <div class="projects__slider">
+        <div class="projects__slide">
+            <div class="container">
+                <div class="projects__slide_info">
+                    <div class="projects__slide_head">
+                        <h3 class="projects__slide_title">Ип престиж</h3>
+                        <p class="projects__slide_subtitle">Обучение преподавателей</p>
+                    </div>
+                    <div class="projects__slide_body">
+                        <h4 class="projects__slide_body_title">Задача</h4>
+                        <p class="projects__slide_body_text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.
+                        </p>
+                        <h4 class="projects__slide_body_title">Решение</h4>
+                        <p class="projects__slide_body_text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium
+                        </p>
+                        <h4 class="projects__slide_body_title">Достигнутый результат</h4>
+                        <p class="projects__slide_body_text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.
+                        </p>
+                    </div>
+                    <div class="projects__slide_footer">
+                        <h4 class="projects__slide_footer_title">Используемые технологии</h4>
+                        <div class="projects__slide_footer_icons">
+                            <img src="/img/icons/projects-icon-1.png" alt="technologies icon" class="projects__slide_footer_icon">
+                            <img src="/img/icons/projects-icon-2.png" alt="technologies icon" class="projects__slide_footer_icon">
+                            <img src="/img/icons/projects-icon-3.png" alt="technologies icon" class="projects__slide_footer_icon">
+                            <img src="/img/icons/projects-icon-4.png" alt="technologies icon" class="projects__slide_footer_icon">
+                        </div>
+                    </div>
+                </div>
+                <img src="/img/laptop.png" alt="laptop" class="projects__laptop">
+                <img src="/img/ipad.png" alt="ipad" class="projects__ipad">
+                <button class="projects__next  projects__next-mobile">Следующий клиент</button>
+            </div>
+        </div>
+        <div class="projects__slide">
+            <div class="container">
+                <div class="projects__slide_info">
+                    <div class="projects__slide_head">
+                        <h3 class="projects__slide_title">Ип престиж</h3>
+                        <p class="projects__slide_subtitle">Обучение преподавателей</p>
+                    </div>
+                    <div class="projects__slide_body">
+                        <h4 class="projects__slide_body_title">Задача</h4>
+                        <p class="projects__slide_body_text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.
+                        </p>
+                        <h4 class="projects__slide_body_title">Решение</h4>
+                        <p class="projects__slide_body_text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium
+                        </p>
+                        <h4 class="projects__slide_body_title">Достигнутый результат</h4>
+                        <p class="projects__slide_body_text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.
+                        </p>
+                    </div>
+                    <div class="projects__slide_footer">
+                        <h4 class="projects__slide_footer_title">Используемые технологии</h4>
+                        <div class="projects__slide_footer_icons">
+                            <img src="/img/icons/projects-icon-1.png" alt="technologies icon" class="projects__slide_footer_icon">
+                            <img src="/img/icons/projects-icon-2.png" alt="technologies icon" class="projects__slide_footer_icon">
+                            <img src="/img/icons/projects-icon-3.png" alt="technologies icon" class="projects__slide_footer_icon">
+                            <img src="/img/icons/projects-icon-4.png" alt="technologies icon" class="projects__slide_footer_icon">
+                        </div>
+                    </div>
+                </div>
+                <img src="/img/laptop.png" alt="laptop" class="projects__laptop">
+                <img src="/img/ipad.png" alt="ipad" class="projects__ipad">
+                <button class="projects__next projects__next-mobile">Следующий клиент</button>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- end projects.html-->
-
-<!-- start reviews.html-->
-<section class="reviews">
-    <div class="container">
-        <h2 class="reviews__title">Отзывы</h2>
-        <h3 class="reviews__subtitle">Наших постоянных клиентов</h3>
-        <div class="reviews__wrap">
-            <div class="reviews__item">
-                <div class="reviews__photo">
-                    <img src="img/reviews/1.png" alt="">
-                </div>
-                <h4 class="reviews__name">Ярослав Пархоменко</h4>
-                <span class="reviews__position">Директор клининговой компании Almaclean.kz</span>
-                <p class="reviews__desk">
-                    Спасибо всей команде
-                    RockMarketing за качественную и результативную рекламу. Работаем уже 2 года. Целевые заявки поступают стабильно. Планируем развивать сотрудничество. Всем рекомендую!
-                </p>
-            </div>
-            <div class="reviews__item">
-                <div class="reviews__photo">
-                    <img src="img/reviews/1.png" alt="">
-                </div>
-                <h4 class="reviews__name">Ярослав Пархоменко</h4>
-                <span class="reviews__position">Директор клининговой компании Almaclean.kz</span>
-                <p class="reviews__desk">
-                    Спасибо всей команде
-                    RockMarketing за качественную и результативную рекламу. Работаем уже 2 года. Целевые заявки поступают стабильно. Планируем развивать сотрудничество. Всем рекомендую!
-                </p>
-            </div>
-            <div class="reviews__item">
-                <div class="reviews__photo">
-                    <img src="img/reviews/1.png" alt="">
-                </div>
-                <h4 class="reviews__name">Ярослав Пархоменко</h4>
-                <span class="reviews__position">Директор клининговой компании Almaclean.kz</span>
-                <p class="reviews__desk">
-                    Спасибо всей команде
-                    RockMarketing за качественную и результативную рекламу. Работаем уже 2 года. Целевые заявки поступают стабильно. Планируем развивать сотрудничество. Всем рекомендую!
-                </p>
-            </div>
-            <div class="reviews__item">
-                <div class="reviews__photo">
-                    <img src="img/reviews/1.png" alt="">
-                </div>
-                <h4 class="reviews__name">Ярослав Пархоменко</h4>
-                <span class="reviews__position">Директор клининговой компании Almaclean.kz</span>
-                <p class="reviews__desk">
-                    Спасибо всей команде
-                    RockMarketing за качественную и результативную рекламу. Работаем уже 2 года. Целевые заявки поступают стабильно. Планируем развивать сотрудничество. Всем рекомендую!
-                </p>
-            </div>
-            <div class="reviews__item">
-                <div class="reviews__photo">
-                    <img src="img/reviews/1.png" alt="">
-                </div>
-                <h4 class="reviews__name">Ярослав Пархоменко</h4>
-                <span class="reviews__position">Директор клининговой компании Almaclean.kz</span>
-                <p class="reviews__desk">
-                    Спасибо всей команде
-                    RockMarketing за качественную и результативную рекламу. Работаем уже 2 года. Целевые заявки поступают стабильно. Планируем развивать сотрудничество. Всем рекомендую!
-                </p>
-            </div>
-            <div class="reviews__item">
-                <div class="reviews__photo">
-                    <img src="img/reviews/1.png" alt="">
-                </div>
-                <h4 class="reviews__name">Ярослав Пархоменко</h4>
-                <span class="reviews__position">Директор клининговой компании Almaclean.kz</span>
-                <p class="reviews__desk">
-                    Спасибо всей команде
-                    RockMarketing за качественную и результативную рекламу. Работаем уже 2 года. Целевые заявки поступают стабильно. Планируем развивать сотрудничество. Всем рекомендую!
-                </p>
-            </div>
-        </div>
-        <button class="reviews__btn">Оставить отзыв</button>
-    </div>
-    <div class="reviews__dots"></div>
-    <div class="reviews__dots right"></div>
-</section>
-<!-- end reviews.html-->
-
-<!-- start сost-services.html-->
-
-<!-- end сost-services.html-->
 
 <!-- start footer.html-->
 

@@ -1,5 +1,5 @@
 function projectsSliderInit() {
-    var $slickElement = $('.projects__slides');
+    var $slickElement = $('.projects__slider');
     var $paginInfo = $('.projects__slider_pagination-info');
     var $currentSlide = $paginInfo.find('strong');
     var $slidesCount = $paginInfo.find('span');
@@ -16,9 +16,48 @@ function projectsSliderInit() {
         infinite: false,
         nextArrow: '.projects__next',
         prevArrow: '.projects__prev',
+        slidesToShow: 1,
     })
 }
 
+function mobileMenuInit() {
+
+    $(document).on('click', '.menu__btn', function () {
+        $('.menu__wrap').slideDown('fast');
+        $('body').addClass('overlay_active');
+    });
+
+    $(document).on('click', '.menu__close', function () {
+        $('.menu__wrap').slideUp('fast');
+        $('body').removeClass('overlay_active');
+    })
+
+}
+
+function showMoreClientsInit() {
+    $(document).on('click', '.clients__show-more', function () {
+        var list = $('.clients__list');
+
+        list.toggleClass('clients--hidden');
+        if (list.hasClass('clients--hidden')) {
+            $(this).text('Загрузить еще');
+        } else {
+            $(this).text('Свернуть');
+        }
+    });
+}
+
+function overlayClickInit() {
+    $(document).on('click', '.overlay', function () {
+       $('body').removeClass('overlay_active');
+        $('.menu__wrap').slideUp('fast');
+    });
+}
+
+
 $(function () {
     projectsSliderInit();
+    mobileMenuInit();
+    showMoreClientsInit();
+    overlayClickInit();
 });
