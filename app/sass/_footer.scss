@@ -1,0 +1,148 @@
+.footer {
+  position: relative;
+
+  .container {
+    display: flex;
+  }
+
+  &__contacts {
+    margin-right: 100px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+  &__logo {
+    margin-bottom: 20px;
+    width: 153px;
+    height: 102px;
+    object-fit: contain;
+  }
+  &__phone {
+    margin-bottom: 10px;
+    font-family: 'MullerExtraBold', serif;
+    font-size: 24px;
+  }
+  &__email {
+    font-family: 'MullerLight', serif;
+    font-size: 18px;
+  }
+  &__messanger {
+    margin-top: auto;
+    font-family: 'MullerExtraBold', serif;
+    font-size: 18px;
+    color: #00b15a;
+    img {
+      margin-right: 10px;
+      height: 43px;
+      width: 43px;
+      object-fit: contain;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__nav {
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      font-family: 'MullerMedium', serif;
+      font-size: 16px;
+      color: #262626;
+      letter-spacing: 3.2px;
+    }
+  }
+  &__items {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    li {
+      margin-bottom: 10px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      &:before {
+        content: '';
+        display: block;
+        margin-right: 5px;
+        height: 3px;
+        width: 3px;
+        border-radius: 50%;
+        background-color: #262626;
+        opacity: 0.75;
+      }
+    }
+    a {
+      font-family: 'MullerLight', serif;
+      font-size: 14px;
+      opacity: 0.75;
+      color: #262626;
+    }
+  }
+  &__cards {
+    align-self: flex-end;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 150px;
+    &_title {
+      font-family: 'MullerBold', serif;
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    img {
+      height: 29px;
+      max-width: 70px;
+      &:not(:last-of-type) {
+        margin-right: 5px;
+      }
+    }
+  }
+  &__social {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &_wrap {
+      margin-top: auto;
+    }
+    &_title {
+      font-family: 'MullerBold', serif;
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    img {
+      height: 29px;
+      width: 29px;
+      object-fit: contain;
+      &:not(:last-of-type) {
+        margin-right: 10px;
+      }
+    }
+  }
+  &__request {
+    font-family: 'MullerBold', serif;
+    font-size: 16px;
+    color: var(--yellow);
+    width: 318px;
+    height: 68px;
+    border-radius: 33px;
+    background-color: #242424;
+    transition: .4s;
+    border: none;
+    &:hover {
+      box-shadow: -13px -8px 43px rgba(35, 35, 35, 0.15);
+    }
+  }
+}
