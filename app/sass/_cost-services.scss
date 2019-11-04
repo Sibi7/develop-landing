@@ -1,6 +1,5 @@
 .cost-services {
   position: relative;
-  width: 100%;
 
   &__header {
     display: flex;
@@ -41,7 +40,8 @@
   }
 
   .active {
-    display: block;
+    display: flex;
+    justify-content: center;
   }
 
   .faded {
@@ -60,11 +60,12 @@
     flex-direction: column;
     justify-content: center;
     padding: rem(45);
+    margin: 0 rem(18) ;
     align-items: center;
     text-align: center;
     box-shadow: 0 0 95px rgba(60, 60, 60, 0.1);
-    max-width: rem(323);
     transition: 200ms ease;
+    width: rem(363);
     &:hover {
       transition: 200ms ease;
       background: #323232;
@@ -76,6 +77,7 @@
     font-size: rem(12);
     text-transform: uppercase;
     letter-spacing: 1.2px;
+    margin-bottom: rem(35);
   }
 
   &__form-icon {
@@ -84,17 +86,35 @@
     align-items: center;
     width: rem(101);
     height: rem(113);
+    margin-bottom: rem(35);
     background: url("../img/cost-services/form-icon.png") no-repeat center;
     background-size: contain;
   }
 
-  &__icon {
+  &__icon-01 {
     width: rem(40);
     height: 100%;
     background: url("../img/cost-services/1.png") no-repeat center;
     background-size: contain;
   }
-
+  &__icon-02 {
+    width: rem(40);
+    height: 100%;
+    background: url("../img/cost-services/2.png") no-repeat center;
+    background-size: contain;
+  }
+  &__icon-03 {
+    width: rem(40);
+    height: 100%;
+    background: url("../img/cost-services/3.png") no-repeat center;
+    background-size: contain;
+  }
+  &__icon-04 {
+    width: rem(40);
+    height: 100%;
+    background: url("../img/cost-services/1.png") no-repeat center;
+    background-size: contain;
+  }
   &__name {
     color: #262626;
     font-family: "MullerExtraBold", serif;
@@ -147,24 +167,62 @@
     letter-spacing: 1.6px;
     border: none;
     transition: 200ms ease;
-
     &:hover {
       transition: 200ms ease;
       color: #d6ef2c;
       box-shadow: -13px -8px 43px rgba(9, 9, 9, 0.2);
     }
   }
+  &__conditions{
+    margin: rem(70);
+    text-align: center;
+    a{
+      text-decoration: underline;
+      color: #262626;
+      font-family: "MullerExtraBold", serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 19.2px;
+      text-transform: uppercase;
+      letter-spacing: 1.35px;
+    }
+  }
 }
 
-.cost-services__item:hover .cost-services__icon {
+.cost-services__item:hover .cost-services__icon-01 {
+   background-image: url("../img/cost-services/1-hover.png");
+   transition: 200ms ease;
+ }
+.cost-services__item:hover .cost-services__icon-02 {
+  background-image: url("../img/cost-services/2-hover.png");
+  transition: 200ms ease;
+}
+.cost-services__item:hover .cost-services__icon-03 {
+  background-image: url("../img/cost-services/3-hover.png");
+  transition: 200ms ease;
+}
+.cost-services__item:hover .cost-services__icon-04 {
   background-image: url("../img/cost-services/1-hover.png");
   transition: 200ms ease;
 }
-.cost-services__item:hover .cost-services__list, .cost-services__price, .cost-services__text{
+.cost-services__item:hover .cost-services__list{
+  color: #fff;
+  transition: 200ms ease;
+}
+.cost-services__item:hover .cost-services__text{
   color: #fff;
   transition: 200ms ease;
 }
 .cost-services__item:hover .cost-services__name{
   color: var(--yellow);
+  transition: 200ms ease;
+}
+.cost-services__item:hover .cost-services__price{
+  color: #fff;
+  transition: 200ms ease;
+}
+.cost-services__item:hover .cost-services__order{
+  color: #272727;
+  background: var(--yellow);
   transition: 200ms ease;
 }

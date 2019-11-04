@@ -18,10 +18,10 @@ $baseFontSize: 16;
 
   &::-webkit-scrollbar-thumb {
     border-radius: 0;
-    background: #b8d1e6;
+    background: var(--yellow);
 
     &:hover {
-      background-color: #73b2e6;
+      background-color: darken(#D6EF2C, 10%);
     }
   }
 
