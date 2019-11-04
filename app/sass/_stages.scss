@@ -1,13 +1,21 @@
 .stages {
-  padding: 120px 0;
+  padding: 133px 0 0;
   position: relative;
   overflow: hidden;
+  @include media-breakpoint-down(md) {
+    padding-top: 38px;
+  }
 
   &__title {
     margin-bottom: 70px;
     font-family: 'MullerExtraBold', serif;
     font-size: 60px;
     letter-spacing: 1.5px;
+    @include media-breakpoint-down(md) {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 18px;
+    }
   }
 
   &__list {
@@ -25,11 +33,32 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    @include media-breakpoint-down(md) {
+      padding: 0;
+      margin-bottom: 13px;
+      width: 100%;
+      flex-direction: row;
+      height: auto;
+      text-align: left;
+      &:nth-of-type(even) {
+        flex-direction: row-reverse;
+        .stages__item_icon {
+          margin-right: 0;
+          margin-left: 5px;
+        }
+        .stages__item_wrap {
+          margin-right: auto;
+        }
+      }
+    }
     &:before {
       z-index: -1;
       content: '';
       display: block;
       position: absolute;
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
     }
 
     &:nth-of-type(1),
@@ -37,10 +66,10 @@
     &:nth-of-type(7),
     &:nth-of-type(8) {
       &:before {
-        top: 55px;
+        top: 70px;
         left: 80%;
         height: 10px;
-        width: 140px;
+        width: 130px;
         background: url('../img/stages/arrow-sm-to-right.png');
         background-size: 100%;
       }
@@ -48,47 +77,59 @@
 
     &:nth-of-type(3) {
       &:before {
-        top: 55px;
+        top: 74px;
         left: 80%;
         height: 420px;
         width: 120px;
         background: url('../img/stages/arrow-down-right.png') no-repeat;
         background-size: cover;
+        @include media-breakpoint-down(lg) {
+          right: -35px;
+          left: auto;
+        }
       }
     }
 
     &:nth-of-type(5),
     &:nth-of-type(6) {
       &:before {
-        top: 55px;
+        top: 67px;
         left: -20%;
         height: 10px;
         width: 140px;
         background: url('../img/stages/arrow-sm-to-left.png');
         background-size: 100%;
+        @include media-breakpoint-down(lg) {
+          left: -25%;
+        }
       }
     }
 
     &:nth-of-type(4) {
       &:before {
-        top: 55px;
-        left: -20%;
+        top: 72px;
+        left: -40px;
         height: 425px;
-        width: 120px;
+        width: 110px;
         background: url('../img/stages/arrow-down-left.png') no-repeat;
-        background-size: cover;
+        background-size: 100% 100%;
+        @include media-breakpoint-down(lg) {
+          left: -30px;
+          width: 90px;
+        }
       }
     }
 
     &:nth-of-type(9) {
       &:before {
-        top: 55px;
+        top: 74px;
         right: -45px;
         height: 425px;
         width: 500px;
         background: url('../img/stages/arrow-down-right-big.png') no-repeat;
         background-size: cover;
         @include media-breakpoint-down(lg) {
+          right: -25px;
           width: 400px;
           background-size: 100% 100%;
         }
@@ -96,22 +137,49 @@
     }
 
     &_icon {
-      margin-bottom: 30px;
-      width: 123px;
-      height: 147px;
+      margin-bottom: 5px;
+      width: 145px;
+      height: 175px;
+      @include media-breakpoint-down(md) {
+        height: 115px;
+        width: 100px;
+        margin-right: 5px;
+        margin-bottom: 0;
+      }
     }
     &_title {
       font-family: 'MullerExtraBold', serif;
       font-size: 27px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       line-height: 1.4;
+      @include media-breakpoint-down(lg) {
+        line-height: 1.2;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        margin-bottom: 12px;
+        line-height: 1.1;
+      }
     }
     &_desc {
       font-family: 'MullerRegular', serif;
-      font-size: 16px;
+      font-size: 18px;
       letter-spacing: 0.9px;
       line-height: 1.4;
       overflow: hidden;
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+        line-height: 1.2;
+      }
+    }
+    &_wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include media-breakpoint-down(md) {
+        align-items: flex-start;
+      }
     }
   }
 
