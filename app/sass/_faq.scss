@@ -1,9 +1,13 @@
 .faq{
   position: relative;
+  background: url("../img/mountains-bg2.png") no-repeat left bottom;
   &__title {
+
     font-size: 60px;
     font-family: 'MullerExtraBold', serif;
     letter-spacing: 1.5px;
+    margin-top: rem(80);
+
   }
 
   &__subtitle {
@@ -11,5 +15,61 @@
     font-family: 'MullerRegular', serif;
     letter-spacing: 2.4px;
     text-transform: uppercase;
+    margin-bottom: rem(80);
+  }
+  &__accordion{
+    padding: rem(80) rem(125);
+    background: #fff;
+    box-shadow: 0 0 95px rgba(60, 60, 60, 0.12);
+
+  }
+  &__accordion-item{
+    border-bottom: 1px dotted #e8e8e8;
+    &:last-child{
+      border: none;
+    }
+  }
+  &__accordion-title{
+    width: 100%;
+    padding: rem(30) rem(50);
+    a{
+      position: relative;
+      display: inline-flex;
+      width: 100%;
+      color: #262626;
+      font-family: "MullerBold", serif;
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: 0.6px;
+      &:before{
+        content: '+';
+        position: absolute;
+        text-align: center;
+        left: -50px;
+        top: 0;
+        height: rem(32);
+        width: rem(32);
+        border-radius: 50%;
+        border: 1px solid #d1d1d1;
+        color: #d1d1d1;
+        font-family: "MullerBold", serif;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+    .active{
+      &:before{
+        content: '-';
+      }
+    }
+  }
+  &__accordion-content{
+    padding: 0 rem(50) rem(30) rem(50);
+    color: #797979;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.6px;
   }
 }

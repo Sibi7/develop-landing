@@ -77,7 +77,7 @@ function hideModal() {
     $('.modal').removeClass('modal--visible')
 }
 
-function tabs() {
+function tabsInit() {
     $('body').on('click', '.cost-services__tab-nav a', function () {
         $('.cost-services__tab-nav a').removeClass('active');
         $(this).addClass('active');
@@ -90,6 +90,16 @@ function tabs() {
         return false;
     });
 }
+function accordionInit(){
+    var allPanels = $('.faq__accordion-item > .faq__accordion-content').hide();
+
+    $('.faq__accordion-item > .faq__accordion-title > a').click(function(e) {
+        e.preventDefault();
+        allPanels.slideUp();
+        $(this).parent().next().slideDown();
+
+        });
+    }
 
 $(function () {
     projectsSliderInit();
@@ -97,5 +107,6 @@ $(function () {
     showMoreClientsInit();
     overlayClickInit();
     showModalInit();
-    tabs();
+    tabsInit();
+    accordionInit();
 });
