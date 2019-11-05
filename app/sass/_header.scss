@@ -207,6 +207,7 @@
       cursor: pointer;
       transition: .4s;
       &:hover {
+        transform: scale(1.1);
         box-shadow: -5px -3px 27px rgba(29, 27, 29, 0.35);
       }
       @include media-breakpoint-down(lg) {
