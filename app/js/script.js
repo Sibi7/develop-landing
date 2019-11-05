@@ -90,16 +90,14 @@ function tabsInit() {
         return false;
     });
 }
-function accordionInit(){
-    var allPanels = $('.faq__accordion-item > .faq__accordion-content').hide();
 
-    $('.faq__accordion-item > .faq__accordion-title > a').click(function(e) {
+function accordionInit() {
+    $(document).on('click', '.faq__accordion-title a', function (e) {
         e.preventDefault();
-        allPanels.slideUp();
-        $(this).parent().next().slideDown();
-
-        });
-    }
+        $(this).toggleClass('active');
+        $(this).parent().next().slideToggle();
+    })
+}
 
 $(function () {
     projectsSliderInit();
