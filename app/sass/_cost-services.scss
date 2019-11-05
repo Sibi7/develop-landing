@@ -7,12 +7,27 @@
     justify-content: space-around;
     align-items: center;
     margin-bottom: rem(80);
+    @include media-breakpoint-down(lg) {
+
+    }
+    @include media-breakpoint-down(md) {
+      flex-wrap: wrap;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: rem(30);
+    }
   }
 
   &__title {
     font-size: 60px;
     font-family: 'MullerExtraBold', serif;
     letter-spacing: 1.5px;
+    @include media-breakpoint-down(md) {
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 30px;
+      letter-spacing: 0.75px;
+    }
   }
 
   &__tree {
@@ -23,6 +38,15 @@
     right: 5%;
     background: url("../img/cost-services/Tree.png") no-repeat center;
     background-size: contain;
+    @include media-breakpoint-down(md) {
+      right: 0;
+      width: rem(160);
+      height: rem(160);
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 
   &__tab-nav {
@@ -30,6 +54,9 @@
       list-style-type: none;
       padding: 0;
       margin: 0;
+      @include media-breakpoint-down(sm) {
+        display: flex;
+      }
 
       li {
         display: inline-flex;
@@ -47,6 +74,19 @@
           font-size: 24px;
           letter-spacing: 0.6px;
           transition: 200ms ease;
+          @include media-breakpoint-down(md) {
+            width: 212px;
+            height: 58px;
+            font-size: 21px;
+            letter-spacing: 0.6px;
+          }
+
+          @include media-breakpoint-down(sm) {
+            width: 133px;
+            height: 36px;
+            font-size: 13px;
+            letter-spacing: 0.59px;
+          }
 
           &:hover {
             transition: 200ms ease;
@@ -70,6 +110,9 @@
   .active {
     display: flex;
     justify-content: center;
+    @include media-breakpoint-down(md) {
+      flex-wrap: wrap;
+    }
   }
 
   .faded {
@@ -97,10 +140,24 @@
     width: rem(363);
     background: #fff;
     z-index: 1;
+    @include media-breakpoint-down(md) {
+      width: 45%;
+      margin-bottom: 4%;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      margin-bottom: rem(20);
+      &:last-child {
+        margin: 0;
+      }
+
+    }
+
     &:hover {
       transition: 200ms ease;
       background: #323232;
     }
+
   }
 
   &__text {
@@ -213,6 +270,9 @@
   &__conditions {
     margin: rem(70);
     text-align: center;
+    @include media-breakpoint-down(sm) {
+      margin: rem(30);
+    }
 
     a {
       text-decoration: underline;
@@ -288,11 +348,13 @@
   color: #272727;
   background: var(--yellow);
   transition: 200ms ease;
-  &:hover{
-    background: darken(#d6ef2c, 7% );
+
+  &:hover {
+    background: darken(#d6ef2c, 7%);
   }
 }
-.tenge{
+
+.tenge {
   display: inline-flex;
   width: rem(20);
   height: rem(20);
@@ -300,6 +362,7 @@
   background: url("../img/icons/tenge.png") no-repeat center;
   background-size: contain;
 }
+
 .cost-services__item:hover .tenge {
   background-image: url("../img/icons/tenge-hover.png");
   transition: 200ms ease;
