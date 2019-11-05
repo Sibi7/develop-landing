@@ -57,15 +57,26 @@
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 1px;
+        transition: 300ms ease;
       }
     }
     .active{
+      transition: 300ms ease;
+
       &:before{
+
         content: '-';
+        color: #232323;
+        border: 1px solid #232323;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: 300ms ease;
       }
     }
   }
   &__accordion-content{
+    display: none;
     padding: 0 rem(50) rem(30) rem(50);
     color: #797979;
     font-size: 24px;
