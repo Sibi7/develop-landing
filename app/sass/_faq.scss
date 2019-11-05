@@ -57,11 +57,21 @@
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 1px;
+        transition: 300ms ease;
       }
     }
     .active{
+      transition: 300ms ease;
+
       &:before{
+
         content: '-';
+        color: #232323;
+        border: 1px solid #232323;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: 300ms ease;
       }
     }
   }
