@@ -1,0 +1,18 @@
+.gifts{
+  position: relative;
+  &__title {
+    font-size: 60px;
+    font-family: 'MullerExtraBold', serif;
+    letter-spacing: 1.5px;
+    margin-top: rem(80);
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    font-family: 'MullerRegular', serif;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    margin-bottom: rem(80);
+  }
+
+}
