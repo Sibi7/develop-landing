@@ -114,5 +114,10 @@
     letter-spacing: 1.35px;
     border: none;
     background: #1c1a1c;
+    transition: 300ms ease;
+    &:hover{
+      transition: 300ms ease;
+      transform: scale(1.1);
+    }
   }
 }

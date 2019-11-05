@@ -288,4 +288,19 @@
   color: #272727;
   background: var(--yellow);
   transition: 200ms ease;
+  &:hover{
+    background: darken(#d6ef2c, 7% );
+  }
+}
+.tenge{
+  display: inline-flex;
+  width: rem(20);
+  height: rem(20);
+  transition: 200ms ease;
+  background: url("../img/icons/tenge.png") no-repeat center;
+  background-size: contain;
+}
+.cost-services__item:hover .tenge {
+  background-image: url("../img/icons/tenge-hover.png");
+  transition: 200ms ease;
 }
