@@ -1,8 +1,41 @@
 .footer {
   position: relative;
+  padding: 120px 0 75px;
+  overflow: hidden;
+  @include media-breakpoint-down(lg) {
+    padding: 80px 0 35px;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 40px 0;
+    border-top: 1px solid #ccc;
+  }
+  &:before, &:after {
+    z-index: 1;
+    content: '';
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    position: absolute;
+    top: -140px;
+    box-shadow: 0 0 200px 30px rgba(0, 0, 0, .4);
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+  &:before {
+    left: -80px;
+  }
+  &:after {
+    right: -80px;
+  }
 
   .container {
     display: flex;
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__contacts {
@@ -12,6 +45,28 @@
     align-items: flex-start;
     flex-direction: column;
     flex-shrink: 0;
+    @include media-breakpoint-down(md) {
+      margin-right: 0;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+  }
+  &__title {
+    display: none;
+    font-family: 'MullerExtraBold', serif;
+    font-size: 30px;
+    @include media-breakpoint-down(md) {
+      display: block;
+    }
+  }
+  &__address {
+    margin-bottom: 15px;
+    display: none;
+    font-family: 'MullerRegular', serif;
+    font-size: 16px;
+    @include media-breakpoint-down(md) {
+      display: block;
+    }
   }
   &__logo {
     margin-bottom: 20px;
@@ -20,23 +75,29 @@
     object-fit: contain;
   }
   &__phone {
-    margin-bottom: 10px;
     font-family: 'MullerExtraBold', serif;
     font-size: 24px;
+    @include media-breakpoint-down(md) {
+      font-size: 16px;
+      line-height: 1.2;
+    }
   }
   &__email {
+    margin-bottom: 10px;
     font-family: 'MullerLight', serif;
     font-size: 18px;
+    @include media-breakpoint-down(md) {
+      margin: 15px 0;
+      font-size: 16px;
+    }
   }
   &__messanger {
     margin-top: auto;
-    font-family: 'MullerExtraBold', serif;
-    font-size: 18px;
-    color: #00b15a;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 20px;
+    }
     img {
-      margin-right: 10px;
       height: 43px;
-      width: 43px;
       object-fit: contain;
     }
   }
@@ -46,13 +107,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media (max-width: 800px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
   &__nav {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 800px) {
+      display: none;
+    }
     a {
       font-family: 'MullerMedium', serif;
       font-size: 16px;
@@ -61,16 +130,22 @@
     }
   }
   &__items {
-    padding: 0;
     margin: 0;
+    margin-top: auto;
+    padding: 0;
     display: flex;
     flex-direction: column;
     list-style-type: none;
+    @media (max-width: 800px) {
+      display: none;
+    }
     li {
-      margin-bottom: 10px;
       position: relative;
       display: flex;
       align-items: center;
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
       &:before {
         content: '';
         display: block;
@@ -95,6 +170,11 @@
     display: flex;
     flex-wrap: wrap;
     width: 150px;
+    @media (max-width: 800px) {
+      align-self: center;
+      margin-bottom: 15px;
+      order: 1;
+    }
     &_title {
       font-family: 'MullerBold', serif;
       font-size: 16px;
@@ -103,7 +183,6 @@
     }
     img {
       height: 29px;
-      max-width: 70px;
       &:not(:last-of-type) {
         margin-right: 5px;
       }
@@ -115,12 +194,19 @@
     flex-direction: column;
     &_wrap {
       margin-top: auto;
+      @media (max-width: 800px) {
+        margin-bottom: 20px;
+      }
     }
     &_title {
       font-family: 'MullerBold', serif;
       font-size: 16px;
       width: 100%;
       margin-bottom: 15px;
+      @media (max-width: 800px) {
+        max-width: 200px;
+        margin: 0 auto 15px;
+      }
     }
     img {
       height: 29px;
@@ -141,6 +227,15 @@
     background-color: #242424;
     transition: .4s;
     border: none;
+    @media (max-width: 800px) {
+      padding: 0 30px;
+      width: 200px;
+      box-sizing: content-box;
+      margin-bottom: 20px;
+    }
+    @include media-breakpoint-down(md) {
+      box-shadow: -13px -8px 43px rgba(35, 35, 35, 0.15);
+    }
     &:hover {
       box-shadow: -13px -8px 43px rgba(35, 35, 35, 0.15);
     }
