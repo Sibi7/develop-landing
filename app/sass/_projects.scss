@@ -2,6 +2,10 @@
   position: relative;
   overflow: hidden;
   padding: 140px 0;
+  margin-top: -73px;
+  @include media-breakpoint-down(lg) {
+    margin-top: -97px;
+  }
 
   .container {
     position: relative;
@@ -14,85 +18,187 @@
     font-family: 'MullerExtraBold', serif;
     font-size: 60px;
     letter-spacing: 1.5px;
+    @include media-breakpoint-down(md) {
+      font-size: 30px;
+      text-align: center;
+      line-height: 1;
+      letter-spacing: 1px;
+    }
   }
 
   &__slider {
     position: relative;
-    width: 680px;
-    border: 1px solid #ccc;
-    box-shadow: -150px -150px 80px -5px #eee;
-    border-radius: 5px;
-    background: #fff;
     &_pagination-info {
       position: absolute;
-      top: 60px;
-      right: 60px;
+      z-index: 1;
+      top: 200px;
+      left: 568px;
+      font-size: 16px;
+      letter-spacing: 1.5px;
+      @include media-breakpoint-down(lg) {
+        left: 458px;
+      }
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+    .slick-list {
+      padding: 182px 0;
+      @include media-breakpoint-down(md) {
+        padding: 98px 0;
+      }
     }
   }
   &__slide {
-    &_body, &_footer {
-      padding: 25px 35px;
-    }
+    position: relative;
+    padding: 190px 0;
+    margin: -190px 0;
+    overflow: hidden;
     &_head, &_body {
       border-bottom: 1px solid #ccc;
+      @include media-breakpoint-down(md) {
+        border: none
+      }
     }
     &_head {
-      padding: 25px 155px 25px 35px;
+      padding: 40px 125px 25px 65px;
+      @include media-breakpoint-down(lg) {
+        padding: 40px 125px 25px 45px;
+      }
+      @include media-breakpoint-down(md) {
+        padding: 10px 0;
+        text-align: center;
+        margin-bottom: 439px;
+      }
     }
     &_title {
+      margin-bottom: 5px;
       font-family: 'MullerExtraBold', serif;
       font-size: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 1;
+      @include media-breakpoint-down(md) {
+        font-size: 25px;
+        text-transform: none;
+      }
     }
     &_subtitle {
       margin-bottom: 0;
       font-family: 'MullerRegular', serif;
       font-size: 18px;
       text-transform: uppercase;
+      letter-spacing: 0.7px;
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+      }
     }
     &_body {
+      padding: 35px 65px 19px;
+      @include media-breakpoint-down(lg) {
+        padding: 35px 45px 19px;
+      }
+      @include media-breakpoint-down(md) {
+        padding: 10px 0;
+        text-align: center;
+      }
       &_title {
-        margin-bottom: 10px;
+        margin: 8px 0;
         font-family: 'MullerExtraBold', serif;
         font-size: 24px;
+        line-height: 1;
+        @include media-breakpoint-down(md) {
+          margin: 8px 0 16px;
+        }
       }
       &_text {
-        margin-bottom: 20px;
+        margin-bottom: 29px;
         font-family: 'MullerLight', serif;
         font-size: 16px;
+        line-height: 1.4;
+        letter-spacing: 0.5px;
+        @include media-breakpoint-down(md) {
+          line-height: 1.1;
+        }
       }
     }
     &_footer {
+      padding: 40px 65px 35px;
       display: flex;
       align-items: center;
+      @include media-breakpoint-down(lg) {
+        padding: 40px 45px 35px;
+      }
+      @include media-breakpoint-down(md) {
+        flex-direction: column;
+        padding: 14px 0;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+      &_icons {
+        display: flex;
+        align-items: center;
+      }
       &_title {
-        margin-right: 50px;
+        margin-bottom: 0;
+        margin-right: 35px;
         max-width: 200px;
         font-family: 'MullerExtraBold', serif;
         font-size: 24px;
         line-height: 23px;
+        letter-spacing: 0.8px;
+        @include media-breakpoint-down(md) {
+          margin-right: 0;
+          margin-bottom: 25px;
+        }
       }
       &_icon {
         margin: 0 10px;
       }
     }
+    &_info {
+      position: relative;
+      width: 680px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: #fff;
+      @media (min-width: 1500px) {
+        box-shadow: -150px -150px 80px -5px #eee;
+      }
+      @include media-breakpoint-down(lg) {
+        width: 580px;
+      }
+      @include media-breakpoint-down(md) {
+        width: auto;
+        border: none
+      }
+    }
   }
 
-  &__laptop {
+  &__tech {
     position: absolute;
     z-index: -1;
-    top: -30px;
-    right: -400px;
-  }
-  &__ipad {
-    position: absolute;
-    bottom: -140px;
-    right: -220px;
+    top: -123px;
+    left: 615px;
+    @include media-breakpoint-down(lg) {
+      left: 450px;
+    }
+    @include media-breakpoint-down(md) {
+      left: 50%;
+      top: 65px;
+      z-index: 2;
+      width: 500px;
+      height: 460px;
+      transform: translate(-50%);
+      object-fit: contain;
+    }
   }
 
-  &__next, &__prev {
+  &__next {
     position: absolute;
+    top: 178px;
+    left: 652px;
     z-index: 2;
-    right: -30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,17 +208,46 @@
     border-radius: 50%;
     border: none;
     transition: .4s;
+    @include media-breakpoint-down(lg) {
+      left: 552px;
+    }
+    @include media-breakpoint-down(md)  {
+      margin: 15px auto;
+      position: relative;
+      left: 0;
+      top: 0;
+      width: auto;
+      border-radius: 44px;
+      padding: 0 25px;
+      letter-spacing: 1.4px;
+      height: 46px;
+      font-size: 14px;
+      background-color: #fff;
+      border: 1px solid #262626;
+    }
     &:hover {
       box-shadow: 0 0 54px rgba(1, 1, 1, 0.3);
     }
+    &-mobile {
+      display: none!important;
+      @include media-breakpoint-down(md) {
+        display: flex!important;
+      }
+    }
   }
-  &__next {
-    top: 38px;
+
+  &__common {
+    position: absolute;
+    top: 40px;
+    @include media-breakpoint-down(md) {
+      left: 0;
+      top: 13px;
+      width: 100%;
+    }
+    .projects__next {
+      @include media-breakpoint-down(md) {
+        display: none!important;
+      }
+    }
   }
-  //&__prev {
-  //  right: -30px;
-  //  img {
-  //    transform: rotate(180deg);
-  //  }
-  //}
 }

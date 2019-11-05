@@ -13,6 +13,10 @@
 @import "_guarantee";
 @import "_clients";
 @import "_projects";
+@import "_modal";
+@import "_cost-services";
+@import "_order-2";
+@import "_faq";
 
 ::placeholder {
   color: #666;
@@ -60,6 +64,23 @@ button {
   &.img-width {
     width: 100%;
   }
+}
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  background: rgba(0, 0, 0, .6);
+  .overlay_active & {
+    display: block;
+  }
+}
+.overlay_active {
+  position: relative;
+  overflow: hidden;
 }
 
 

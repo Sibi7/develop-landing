@@ -1,0 +1,283 @@
+.cost-services {
+  position: relative;
+
+  &__header {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: rem(80);
+  }
+  &__title{
+    font-size: 60px;
+    font-family: 'MullerExtraBold', serif;
+    letter-spacing: 1.5px;
+  }
+  &__tree{
+    position: absolute;
+    width: rem(200);
+    height: rem(200);
+    top: -111px;
+    right: 10%;
+    background: url("../img/cost-services/Tree.png") no-repeat center;
+    background-size: contain;
+  }
+  &__tab-nav {
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      li {
+        display: inline-flex;
+        a {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          width: 240px;
+          height: 65px;
+          margin: 0 rem(7);
+          border-radius: 33px;
+          border: 1px solid #a6a6a6;
+          color: #9d9d9d;
+          font-size: 24px;
+          letter-spacing: 0.6px;
+          transition: 200ms ease;
+          &:hover{
+            transition: 200ms ease;
+            background: #1e1c1e;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    ul li a.active {
+      background: #1e1c1e;
+      color: #fff;
+    }
+  }
+
+  &__tab-pane {
+    display: none;
+  }
+
+  .active {
+    display: flex;
+    justify-content: center;
+  }
+
+  .faded {
+    opacity: 0;
+    transition: all 1s;
+  }
+
+  .faded.in {
+    opacity: 1;
+    transition: all 1s;
+  }
+
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: rem(45);
+    margin: 0 rem(18);
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 95px rgba(60, 60, 60, 0.1);
+    transition: 200ms ease;
+    width: rem(363);
+    background: #fff;
+z-index: 1;
+    &:hover {
+      transition: 200ms ease;
+      background: #323232;
+    }
+  }
+
+  &__text {
+    color: #262626;
+    font-size: rem(12);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: rem(35);
+  }
+
+  &__form-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(101);
+    height: rem(113);
+    margin-bottom: rem(35);
+    background: url("../img/cost-services/form-icon.png") no-repeat center;
+    background-size: contain;
+  }
+
+  &__icon-01 {
+    width: rem(40);
+    height: 100%;
+    background: url("../img/cost-services/1.png") no-repeat center;
+    background-size: contain;
+  }
+
+  &__icon-02 {
+    width: rem(40);
+    height: 100%;
+    background: url("../img/cost-services/2.png") no-repeat center;
+    background-size: contain;
+  }
+
+  &__icon-03 {
+    width: rem(40);
+    height: 100%;
+    background: url("../img/cost-services/3.png") no-repeat center;
+    background-size: contain;
+  }
+
+  &__icon-04 {
+    width: rem(40);
+    height: 100%;
+    background: url("../img/cost-services/1.png") no-repeat center;
+    background-size: contain;
+  }
+
+  &__name {
+    color: #262626;
+    font-family: "MullerExtraBold", serif;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 0.75px;
+  }
+
+  &__list {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    list-style-image: url("../img/cost-services/ok.png");
+    color: #262626;
+    font-family: "MullerLight", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.4px;
+  }
+
+  &__price {
+    color: #262626;
+    font-size: 48px;
+    font-family: "MullerExtraBold", serif;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+
+    span {
+      font-family: "MullerLight", serif;
+      font-size: 15px;
+      font-weight: 300;
+      letter-spacing: 1.8px;
+    }
+  }
+
+  &__order {
+    width: 221px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: rem(33);
+    background-color: #262626;
+    color: #d6ef2c;
+    font-family: "MullerBold", serif;
+    font-size: rem(16);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    border: none;
+    transition: 200ms ease;
+
+    &:hover {
+      transition: 200ms ease;
+      color: #d6ef2c;
+      box-shadow: -13px -8px 43px rgba(9, 9, 9, 0.2);
+    }
+  }
+
+  &__conditions {
+    margin: rem(70);
+    text-align: center;
+
+    a {
+      text-decoration: underline;
+      color: #262626;
+      font-family: "MullerExtraBold", serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 19.2px;
+      text-transform: uppercase;
+      letter-spacing: 1.35px;
+    }
+  }
+  &__dots {
+    position: absolute;
+    left: 0;
+    top: 55.4%;
+    height: 275px;
+    width: 10%;
+    background: url('../img/dots.png') center center;
+    background-size: 100%;
+    transform: translateY(-50%);
+    opacity: .23;
+  }
+  .right {
+    right: 0%;
+    left: inherit;
+  }
+}
+
+.cost-services__item:hover .cost-services__icon-01 {
+  background-image: url("../img/cost-services/1-hover.png");
+  transition: 200ms ease;
+}
+
+.cost-services__item:hover .cost-services__icon-02 {
+  background-image: url("../img/cost-services/2-hover.png");
+  transition: 200ms ease;
+}
+
+.cost-services__item:hover .cost-services__icon-03 {
+  background-image: url("../img/cost-services/3-hover.png");
+  transition: 200ms ease;
+}
+
+.cost-services__item:hover .cost-services__icon-04 {
+  background-image: url("../img/cost-services/1-hover.png");
+  transition: 200ms ease;
+}
+
+.cost-services__item:hover .cost-services__list {
+  color: #fff;
+  transition: 200ms ease;
+}
+
+.cost-services__item:hover .cost-services__text {
+  color: #fff;
+  transition: 200ms ease;
+}
+
+.cost-services__item:hover .cost-services__name {
+  color: var(--yellow);
+  transition: 200ms ease;
+}
+
+.cost-services__item:hover .cost-services__price {
+  color: #fff;
+  transition: 200ms ease;
+}
+
+.cost-services__item:hover .cost-services__order {
+  color: #272727;
+  background: var(--yellow);
+  transition: 200ms ease;
+}
