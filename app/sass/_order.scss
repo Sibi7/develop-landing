@@ -119,7 +119,11 @@
       background-color: var(--yellow);
       border: none;
       border-radius: 33px;
-      box-shadow: 0 0 87px rgba(214, 239, 44, 0.05);
+      transition: .4s;
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 87px rgba(214, 239, 44, 0.05);
+      }
       @include media-breakpoint-down(md) {
         font-size: 15px;
         order: 1;

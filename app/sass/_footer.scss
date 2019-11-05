@@ -127,6 +127,9 @@
       font-size: 16px;
       color: #262626;
       letter-spacing: 3.2px;
+      &:hover {
+        color: var(--yellow);
+      }
     }
   }
   &__items {
