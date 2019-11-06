@@ -240,6 +240,7 @@
       box-shadow: -13px -8px 43px rgba(35, 35, 35, 0.15);
     }
     &:hover {
+      transform: scale(1.1);
       box-shadow: -13px -8px 43px rgba(35, 35, 35, 0.15);
     }
   }

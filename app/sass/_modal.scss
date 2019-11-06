@@ -67,11 +67,13 @@
     color: var(--yellow);
     text-transform: uppercase;
     border: none;
+    transition: .4s;
     @include media-breakpoint-down(md) {
       font-size: 14px;
       height: 52px;
     }
     &:hover {
+      transform: scale(1.1);
       box-shadow: 8px 13px 43px rgba(38, 38, 38, 0.35);
     }
   }
