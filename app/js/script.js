@@ -32,27 +32,43 @@ function projectsSliderInit() {
     })
 }
 function reviewsSliderInit() {
-
-
-
     var $slickElement = $('.reviews__wrap');
-    var $paginInfo = $('.projects__slider_pagination-info');
-    var $currentSlide = $paginInfo.find('strong');
-    var $slidesCount = $paginInfo.find('span');
-
+    var $currentSlide = $('.reviews__current');
+    var $slidesCount = $('.reviews__amount');
+    //
     $slickElement.on('init reInit afterChange', function (event, slick, currentSlide) {
-        var i = (currentSlide ? currentSlide : 0) + 1;
+        var i = 0
+        if (window.innerWidth > 991) {
+            i = (currentSlide ? currentSlide : 0) + 2;
+        } else {
+            i = (currentSlide ? currentSlide : 0) + 1;
+        }
         $currentSlide.text(i < 10 ? ('0' + i) : i);
         $slidesCount.text(slick.slideCount < 10 ? ('0' + slick.slideCount) : slick.slideCount);
     });
 
     $slickElement.slick({
-        autoplay: true,
+        autoplay: false,
         dots: false,
         infinite: false,
-        nextArrow: '.projects__next',
-        prevArrow: '.projects__prev',
-        slidesToShow: 1,
+        nextArrow: '.reviews__next',
+        prevArrow: '.reviews__prev',
+        responsive: [
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 981,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+        ]
     })
 }
 
@@ -169,7 +185,13 @@ $(function () {
     accordionInit();
     moneyCounterInit();
     scrollNavigationInit();
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 1200) {
         reviewsSliderInit();
     }
 });
+
+window.onresize = function () {
+    if (window.innerWidth < 1200) {
+        reviewsSliderInit();
+    }
+}
