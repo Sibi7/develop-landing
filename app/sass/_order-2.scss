@@ -2,6 +2,9 @@
   position: relative;
   padding: rem(130);
   background: #1d1b1d;
+  @include media-breakpoint-down(sm){
+    padding: rem(80) rem(30);
+  }
 
   &__wrap {
     position: relative;
@@ -15,11 +18,15 @@
   &__title {
     font-family: "MullerExtraBold", serif;
     font-size: 60px;
-    font-weight: 400;
     letter-spacing: 3px;
     color: #fff;
     margin-bottom: rem(60);
-
+    @include media-breakpoint-down(sm){
+      text-align: center;
+      font-size: 30px;
+      letter-spacing: 1.78px;
+      line-height: 30px;
+    }
     span {
       color: #d6ef2c;
     }
@@ -43,6 +50,12 @@
       transition: 300ms ease;
       transform: scale(1.1);
     }
+    @include media-breakpoint-down(sm){
+      width: 262px;
+      height: 66px;
+      font-size: 15px;
+      letter-spacing: 1.35px;
+    }
   }
 
   &__img-middle {
@@ -54,6 +67,9 @@
     transform: translate(-50%, -50%);
     background: url("../img/dots-order.png") no-repeat center center;
     background-size: 100%;
+    @include media-breakpoint-down(sm){
+      display: none;
+    }
   }
 
   &__img {
@@ -71,5 +87,8 @@
     right: 0;
     background: url("../img/order-right.png") no-repeat right;
     background-size: contain;
+    @include media-breakpoint-down(sm){
+      display: none;
+    }
   }
 }

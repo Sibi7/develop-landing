@@ -7,7 +7,16 @@
     font-family: 'MullerExtraBold', serif;
     letter-spacing: 1.5px;
     margin-top: rem(80);
-
+    @include media-breakpoint-down(lg) {
+      letter-spacing: 1.2px;
+      margin-top: rem(40);
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 30px;
+      text-align: center;
+      line-height: 1;
+      letter-spacing: 0.4px;
+    }
   }
 
   &__subtitle {
@@ -16,11 +25,19 @@
     letter-spacing: 2.4px;
     text-transform: uppercase;
     margin-bottom: rem(80);
+    @include media-breakpoint-down(md) {
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
   }
   &__accordion{
     padding: rem(80) rem(125);
     background: #fff;
     box-shadow: 0 0 95px rgba(60, 60, 60, 0.12);
+    @include media-breakpoint-down(sm){
+      padding: rem(20);
+    }
 
   }
   &__accordion-item{
@@ -32,6 +49,10 @@
   &__accordion-title{
     width: 100%;
     padding: rem(30) rem(50);
+    @include media-breakpoint-down(sm) {
+      padding: rem(20) rem(30) rem(20) 0;
+
+    }
     a{
       position: relative;
       display: inline-flex;
@@ -41,7 +62,13 @@
       font-size: 24px;
       font-weight: 400;
       letter-spacing: 0.6px;
+      @include media-breakpoint-down(sm) {
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 0.45px;
+      }
       &:before{
+
         content: '+';
         position: absolute;
         text-align: center;
@@ -58,13 +85,17 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         transition: 300ms ease;
+        @include media-breakpoint-down(sm) {
+          left: inherit;
+          right: -30px;
+        }
       }
+
     }
     .active{
       transition: 300ms ease;
 
       &:before{
-
         content: '-';
         color: #232323;
         border: 1px solid #232323;
@@ -82,5 +113,11 @@
     font-size: 24px;
     line-height: 30px;
     letter-spacing: 0.6px;
+    @include media-breakpoint-down(sm) {
+      padding: 0  rem(30)  rem(20) 0;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.35px;
+    }
   }
 }
