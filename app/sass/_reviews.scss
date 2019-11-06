@@ -4,6 +4,11 @@
     font-size: 60px;
     font-family: 'MullerExtraBold', serif;
     letter-spacing: 1.5px;
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+      font-size: 30px;
+      letter-spacing: 0.75px;
+    }
   }
 
   &__subtitle {
@@ -11,6 +16,12 @@
     font-family: 'MullerRegular', serif;
     letter-spacing: 2.4px;
     text-transform: uppercase;
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+      font-size: 14px;
+      letter-spacing: 0.7px;
+    }
   }
 
   &__wrap {
@@ -18,6 +29,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
   }
 
   &__item {
@@ -32,6 +44,11 @@
     box-shadow: 0 0 95px rgba(60, 60, 60, 0.12);
     z-index: 1;
     background: #fff;
+    @include media-breakpoint-down(sm){
+      max-width: 100%;
+      padding-left: rem(35);
+      padding-right: rem(35);
+    }
   }
 
   &__photo {
@@ -94,6 +111,9 @@
     background-size: 100%;
     transform: translateY(-50%);
     opacity: .23;
+    @include media-breakpoint-down(sm){
+      display: none;
+    }
   }
 
   .right {

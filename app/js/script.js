@@ -31,30 +31,30 @@ function projectsSliderInit() {
         slidesToShow: 1,
     })
 }
-// function reviewsSliderInit() {
-//
-//
-//
-//     var $slickElement = $('.reviews__wrap');
-//     // var $paginInfo = $('.projects__slider_pagination-info');
-//     // var $currentSlide = $paginInfo.find('strong');
-//     // var $slidesCount = $paginInfo.find('span');
-//     //
-//     // $slickElement.on('init reInit afterChange', function (event, slick, currentSlide) {
-//     //     var i = (currentSlide ? currentSlide : 0) + 1;
-//     //     $currentSlide.text(i < 10 ? ('0' + i) : i);
-//     //     $slidesCount.text(slick.slideCount < 10 ? ('0' + slick.slideCount) : slick.slideCount);
-//     // });
-//
-//     $slickElement.slick({
-//         autoplay: true,
-//         dots: false,
-//         infinite: false,
-//         nextArrow: '.projects__next',
-//         prevArrow: '.projects__prev',
-//         slidesToShow: 2,
-//     })
-// }
+function reviewsSliderInit() {
+
+
+
+    var $slickElement = $('.reviews__wrap');
+    // var $paginInfo = $('.projects__slider_pagination-info');
+    // var $currentSlide = $paginInfo.find('strong');
+    // var $slidesCount = $paginInfo.find('span');
+    //
+    // $slickElement.on('init reInit afterChange', function (event, slick, currentSlide) {
+    //     var i = (currentSlide ? currentSlide : 0) + 1;
+    //     $currentSlide.text(i < 10 ? ('0' + i) : i);
+    //     $slidesCount.text(slick.slideCount < 10 ? ('0' + slick.slideCount) : slick.slideCount);
+    // });
+
+    $slickElement.slick({
+        autoplay: true,
+        dots: false,
+        infinite: false,
+        nextArrow: '.projects__next',
+        prevArrow: '.projects__prev',
+        slidesToShow: 2,
+    })
+}
 
 function mobileMenuInit() {
 
