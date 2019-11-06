@@ -21,6 +21,7 @@
     letter-spacing: 3px;
     color: #fff;
     margin-bottom: rem(60);
+    text-align: center;
     @include media-breakpoint-down(sm){
       text-align: center;
       font-size: 30px;
@@ -67,7 +68,7 @@
     transform: translate(-50%, -50%);
     background: url("../img/dots-order.png") no-repeat center center;
     background-size: 100%;
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(lg){
       display: none;
     }
   }

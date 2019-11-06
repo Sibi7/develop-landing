@@ -35,9 +35,12 @@
     padding: rem(80) rem(125);
     background: #fff;
     box-shadow: 0 0 95px rgba(60, 60, 60, 0.12);
-    @include media-breakpoint-down(sm){
-      padding: rem(20);
+    @include media-breakpoint-down(md){
+      padding: rem(40);
     }
+    @include media-breakpoint-down(sm){
+        padding: rem(20);
+      }
 
   }
   &__accordion-item{
