@@ -202,31 +202,7 @@ function scrollNavigationInit() {
 }
 
 function phoneMaskInit() {
-    $(document).on('keypress', 'input[type="tel"]', function (e) {
-        validatePhoneInput(e)
-    });
-
-    $('input[type="tel"]').usPhoneFormat({
-        format: '(xxx) xxx-xxxx',
-    });
-}
-
-function validatePhoneInput(evt) {
-    var theEvent = evt || window.event;
-
-    // Handle paste
-    if (theEvent.type === 'paste') {
-        key = event.clipboardData.getData('text/plain');
-    } else {
-        // Handle key press
-        var key = theEvent.keyCode || theEvent.which;
-        key = String.fromCharCode(key);
-    }
-    var regex = /[0-9]|\./;
-    if( !regex.test(key) ) {
-        theEvent.returnValue = false;
-        if(theEvent.preventDefault) theEvent.preventDefault();
-    }
+    $('input[type="tel"]').mask('(000) 000-00-00');
 }
 
 $(function () {
@@ -261,4 +237,4 @@ window.onresize = function () {
     if (window.innerWidth < 1200) {
         reviewsSliderInit();
     }
-}
+};
