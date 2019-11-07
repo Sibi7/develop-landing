@@ -186,7 +186,7 @@ function moneyCounterInit() {
                 $counter.text(Number($counter.text()) + 1)
             }
         }
-    }, 300)
+    }, 100)
 }
 
 function scrollNavigationInit() {
