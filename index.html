@@ -44,11 +44,11 @@
         <div class="menu__wrap_block">
             <img src="./img/logo-white.png" alt="logo" class="menu__logo">
             <a href="#top" class="menu__link navigation__link">Главная</a>
-            <a href="#services" class="menu__link navigation__link">Услуги</a>
+            <a href="#about" class="menu__link navigation__link">Технологии</a>
+            <a href="#rock" class="menu__link navigation__link">О нас</a>
             <a href="#portfolio" class="menu__link navigation__link">Портфолио</a>
-            <a href="#reviews" class="menu__link navigation__link">Отзывы</a>
             <a href="#prices" class="menu__link navigation__link">Стоимость</a>
-            <a href="#about" class="menu__link navigation__link">Преимущества</a>
+            <a href="#guarantee" class="menu__link navigation__link">Гарантии</a>
             <button class="menu__close"></button>
         </div>
     </div>
@@ -375,7 +375,7 @@
                 <span class="order__money_text--colored">Деньги,</span> которые Вы <span class="order__money_text--colored">теряете</span>
                 <span class="order__money_text--colored">без</span> продающего <span class="order__money_text--colored">Landing page</span>
             </span>
-            <span class="order__money_number">52 <span class="js-counter-money">357</span> <span class="order__money_number_tenge">т</span></span>
+            <span class="order__money_number"><span class="js-counter-money-t">52</span> <span class="js-counter-money">687</span> <span class="order__money_number_tenge">т</span></span>
         </div>
     </div>
 </section>
@@ -464,7 +464,7 @@
 <!-- end stages.html-->
 
 <!-- start rock.html-->
-<section class="rock">
+<section class="rock" id="rock">
     <div class="container">
         <img src="./img/lighting.png" alt="lighting" class="rock__lighting">
         <h2 class="rock__title">Мы - Rock-Marketing</h2>
@@ -490,7 +490,7 @@
 <!-- end rock.html-->
 
 <!-- start guarantee.html-->
-<section class="guarantee">
+<section class="guarantee" id="guarantee">
     <div class="container">
         <div class="guarantee__wrap">
             <h2 class="guarantee__title">Мы гарантируем</h2>
@@ -952,13 +952,14 @@
     <div class="container">
         <div class="order-2__wrap">
             <h1 class="order-2__title">Возможно вы искали <span>лендинг</span>? </h1>
-            <button class="order-2__button open-modal-btn" data-modal="request">Тогда вам сюда</button>
+            <button class="order-2__button open-modal-btn" data-modal="question">Тогда вам сюда</button>
         </div>
         <div class="order-2__img-middle"></div>
     </div>
     <div class="order-2__img"></div>
     <div class="order-2__img right"></div>
 </section>
+
 <!-- end order-2.html-->
 
 <!-- start gifts.html-->
@@ -991,8 +992,8 @@
     <form class="gifts__form">
         <div class="container">
             <label><input type="text" placeholder="Ваше имя"></label>
-            <label><input type="text" placeholder="E-mail"></label>
-            <label><input type="text" placeholder="Номер телефона"></label>
+            <label><input type="email" placeholder="E-mail"></label>
+            <label><input type="tel" placeholder="Номер телефона"></label>
             <button class="gifts__submit">Заказать</button>
             <span class="gifts__terms">
                 Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с
@@ -1115,11 +1116,11 @@
         </div>
         <div class="footer__wrap">
             <nav class="footer__nav">
-                <a href="#services" class="footer__nav_item navigation__link">Услуги</a>
+                <a href="#about" class="footer__nav_item navigation__link">Технологии</a>
+                <a href="#rock" class="footer__nav_item navigation__link">О нас</a>
                 <a href="#portfolio" class="footer__nav_item navigation__link">Портфолио</a>
-                <a href="#reviews" class="footer__nav_item navigation__link">Отзывы</a>
                 <a href="#prices" class="footer__nav_item navigation__link">Стоимость</a>
-                <a href="#about" class="footer__nav_item navigation__link">Преимущества</a>
+                <a href="#guarantee" class="footer__nav_item navigation__link">Гарантии</a>
             </nav>
             <ul class="footer__items">
                 <li><a href="#" class="footer__nav_item">Услуги</a></li>
@@ -1168,7 +1169,7 @@
     <p class="modal__subtitle">Заполните поля и получите развернутый ответ от наших специалистов</p>
     <form class="modal-question__form">
         <label><input type="text" placeholder="Ваше имя" class="modal-question__name"></label>
-        <label><input type="text" placeholder="Номер телефона" class="modal-question__phone"></label>
+        <label><input type="tel" placeholder="Номер телефона" class="modal-question__phone"></label>
         <label><input type="text" placeholder="Ваш вопрос" class="modal-question__text"></label>
         <button class="modal__submit">Задать вопрос</button>
     </form>
@@ -1178,12 +1179,19 @@
     </span>
 </div>
 
+<div class="modal modal-thanks">
+    <img class="modal__title-img" src="./img/icons/Check.svg" alt="check">
+    <h2 class="modal__title"><strong>Спасибо, мы приняли Вашу заявку!</strong></h2>
+    <p class="modal__subtitle">Специалист перезвонит вам в ближайшее время и ответит на Ваши вопросы</p>
+</div>
+
 <!-- end modals.html-->
 
 <!-- start html_close.html-->
 
 <script src='js/jquery-3.2.1.js' type="text/javascript"></script>
 <script src='js/slick.min.js' type="text/javascript"></script>
+<script src='js/jquery-input-mask-phone-number.min.js' type="text/javascript"></script>
 <script src="js/script.min.js" type="text/javascript"></script>
 </body>
 </html>

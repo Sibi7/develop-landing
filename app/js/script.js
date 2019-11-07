@@ -101,9 +101,9 @@ function showMoreClientsInit() {
 
 function overlayClickInit() {
     $(document).on('click', '.overlay', function () {
-        hideOverlay();
         if ($('.menu__wrap').hasClass('visible')) {
             $('.menu__wrap').slideUp('fast');
+            hideOverlay();
         }
         hideModal();
     });
@@ -126,7 +126,8 @@ function hideOverlay() {
 }
 
 function hideModal() {
-    $('.modal').removeClass('modal--visible')
+    $('.modal').removeClass('modal--visible');
+    hideOverlay();
 }
 
 function tabsInit() {
@@ -153,14 +154,30 @@ function accordionInit() {
 
 function moneyCounterInit() {
     var $counter = $('.js-counter-money');
+    var $counterThousand = $('.js-counter-money-t');
 
     setInterval(function () {
         if (Number($counter.text()) === 999) {
-            $counter.text(100)
+            $counter.text('000');
+            $counterThousand.text(Number($counterThousand.text()) + 1)
         } else {
-            $counter.text(Number($counter.text()) + 1)
+            if (Number($counter.text()) < 10) {
+                if (Number($counter.text()) + 1 === 10) {
+                    $counter.text('0' + (Number($counter.text()) + 1));
+                } else {
+                    $counter.text('00' + (Number($counter.text()) + 1));
+                }
+            } else if (Number( $counter.text()) >= 10 && Number( $counter.text()) < 100) {
+                if (Number($counter.text()) + 1 === 100) {
+                    $counter.text(Number($counter.text()) + 1)
+                } else {
+                    $counter.text('0' + (Number($counter.text()) + 1));
+                }
+            } else {
+                $counter.text(Number($counter.text()) + 1)
+            }
         }
-    }, 1000)
+    }, 300)
 }
 
 function scrollNavigationInit() {
@@ -175,6 +192,34 @@ function scrollNavigationInit() {
     });
 }
 
+function phoneMaskInit() {
+    $(document).on('keypress', 'input[type="tel"]', function (e) {
+        validatePhoneInput(e)
+    });
+
+    $('input[type="tel"]').usPhoneFormat({
+        format: '(xxx) xxx-xxxx',
+    });
+}
+
+function validatePhoneInput(evt) {
+    var theEvent = evt || window.event;
+
+    // Handle paste
+    if (theEvent.type === 'paste') {
+        key = event.clipboardData.getData('text/plain');
+    } else {
+        // Handle key press
+        var key = theEvent.keyCode || theEvent.which;
+        key = String.fromCharCode(key);
+    }
+    var regex = /[0-9]|\./;
+    if( !regex.test(key) ) {
+        theEvent.returnValue = false;
+        if(theEvent.preventDefault) theEvent.preventDefault();
+    }
+}
+
 $(function () {
     projectsSliderInit();
     mobileMenuInit();
@@ -185,9 +230,22 @@ $(function () {
     accordionInit();
     moneyCounterInit();
     scrollNavigationInit();
+    phoneMaskInit();
     if (window.innerWidth < 1200) {
         reviewsSliderInit();
     }
+
+    //TODO: Заглушка для показа модалки благодарности. Удалить для продакшена, иначе не будет работать форма
+    $(document).on('click', 'form button', function (e) {
+        e.preventDefault();
+        hideModal();
+
+        $('.modal-thanks').addClass('modal--visible');
+        showOverlay();
+        setTimeout(function () {
+            hideModal();
+        }, 3000)
+    });
 });
 
 window.onresize = function () {
