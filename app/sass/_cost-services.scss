@@ -108,9 +108,7 @@
   .active {
     display: flex;
     justify-content: center;
-    @include media-breakpoint-down(lg) {
-      flex-wrap: wrap;
-    }
+    flex-wrap: wrap;
   }
 
   .faded {
@@ -270,7 +268,6 @@
     @include media-breakpoint-down(sm) {
       margin: rem(30);
     }
-
     a {
       text-decoration: underline;
       color: #262626;
