@@ -130,7 +130,7 @@ function hideModal() {
 }
 
 function tabsInit() {
-    $('body').on('click', '.cost-services__tab-nav a', function () {
+    $('body').on('click', '.cost-services__tab-nav a , .cost-services__conditions a', function () {
         $('.cost-services__tab-nav a').removeClass('active');
         $(this).addClass('active');
         var href = $(this).attr('href');
@@ -139,7 +139,16 @@ function tabsInit() {
         setTimeout(function () {
             $(href).addClass('in');
         }, 200);
+        var hrefLink =  $('.cost-services__tab-nav li');
+        var hrefTab = $(this).attr('href');
+        hrefLink.each(function () {
+            var thisHrefheaderLink = $(this).find('a');
+            if (thisHrefheaderLink.attr('href') === hrefTab){
+                $(this).find('a').addClass('active')
+            }
+        });
         return false;
+
     });
 }
 
