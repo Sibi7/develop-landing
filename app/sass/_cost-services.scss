@@ -33,6 +33,7 @@
     height: rem(200);
     top: -111px;
     right: 5%;
+    z-index: -1;
     background: url("../img/cost-services/Tree.png") no-repeat center;
     background-size: contain;
     @include media-breakpoint-down(md) {
