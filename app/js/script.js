@@ -31,6 +31,7 @@ function projectsSliderInit() {
         slidesToShow: 1,
     })
 }
+
 function reviewsSliderInit() {
     var $slickElement = $('.reviews__wrap');
     var $currentSlide = $('.reviews__current');
@@ -115,6 +116,11 @@ function showModalInit() {
         $('.modal-' + modalName).addClass('modal--visible');
         showOverlay();
     });
+
+    $(document).on('click', '.modal__close', function () {
+        $('.modal').removeClass('modal--visible');
+        hideOverlay();
+    })
 }
 
 function showOverlay() {
@@ -201,9 +207,40 @@ function scrollNavigationInit() {
     });
 }
 
-function phoneMaskInit() {
-    $('input[type="tel"]').mask('(000) 000-00-00');
+function phoneMaskAndValidationInit() {
+    $('input[type="tel"]').mask('+7 (000) 000-00-00');
+
+    $(document).on('blur', 'input[type="tel"]', function (e) {
+        if (e.target.value.length !== 18) {
+            $(e.target).addClass('invalid');
+        } else {
+            $(e.target).removeClass('invalid');
+        }
+    })
 }
+
+function formSubmitInit() {
+
+    $(document).on('submit', 'form', function (e) {
+
+        if ($(this).find('input[type="tel"]').hasClass('invalid')) {
+            e.preventDefault();
+            return false;
+        } else {
+            // //TODO: Заглушка для показа модалки благодарности. Исправить для продакшена отправку формы
+            e.preventDefault();
+            hideModal();
+
+            $('.modal-thanks').addClass('modal--visible');
+            showOverlay();
+            setTimeout(function () {
+                hideModal();
+            }, 3000)
+        }
+
+    });
+}
+
 
 $(function () {
     projectsSliderInit();
@@ -215,22 +252,12 @@ $(function () {
     accordionInit();
     moneyCounterInit();
     scrollNavigationInit();
-    phoneMaskInit();
+    phoneMaskAndValidationInit();
+    formSubmitInit();
     if (window.innerWidth < 1200) {
         reviewsSliderInit();
     }
 
-    //TODO: Заглушка для показа модалки благодарности. Удалить для продакшена, иначе не будет работать форма
-    $(document).on('click', 'form button', function (e) {
-        e.preventDefault();
-        hideModal();
-
-        $('.modal-thanks').addClass('modal--visible');
-        showOverlay();
-        setTimeout(function () {
-            hideModal();
-        }, 3000)
-    });
 });
 
 window.onresize = function () {

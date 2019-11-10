@@ -167,6 +167,31 @@
       }
     }
   }
+  &__close {
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    border: none;
+    &:before, &:after {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      content: '';
+      height: 2px;
+      width: 100%;
+      background: #aaa;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
 }
 .overlay {
   display: block;

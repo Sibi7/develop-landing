@@ -191,10 +191,14 @@
         position: absolute;
         height: 35px;
         width: 35px;
-        bottom: 25px;
+        bottom: 15px;
         margin-left: 20px;
         background: url("../img/icons/tenge-hover.png") no-repeat center center;
         background-size: contain;
+        @include media-breakpoint-down(md) {
+          bottom: 8px;
+          margin-left: 8px;
+        }
       }
     }
   }

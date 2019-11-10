@@ -85,9 +85,9 @@
                 <span class="header__form_title">Оставьте <strong>заявку</strong></span>
                 <span class="header__form_description">и в ближайшее время наши специалисты свяжуться с вами</span>
             </div>
-            <label><input type="text" placeholder="Ваше имя"></label>
-            <label><input type="tel" placeholder="Телефон"></label>
-            <label><input type="email" placeholder="E-mail"></label>
+            <label><input type="text" placeholder="Ваше имя" required></label>
+            <label><input type="tel" placeholder="Телефон" required></label>
+            <label><input type="email" placeholder="E-mail" required></label>
             <button class="header__form_submit">Заказать</button>
         </form>
 
@@ -358,9 +358,9 @@
         <p class="order__description"><strong>Прямо сейчас сделайте первый шаг</strong> к увеличению продаж и имиджу вашей компании</p>
 
         <form class="order__form">
-            <label><input type="text" placeholder="Ваше имя"></label>
-            <label><input type="email" placeholder="E-mail"></label>
-            <label><input type="tel" placeholder="Номер телефона"></label>
+            <label><input type="text" placeholder="Ваше имя" required></label>
+            <label><input type="email" placeholder="E-mail" required></label>
+            <label><input type="tel" placeholder="Номер телефона" required></label>
             <button class="order__form_submit">Заказать</button>
             <span class="order__form_terms">
                 Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с
@@ -521,9 +521,9 @@
             <div class="guarantee__dots"></div>
             <h3 class="guarantee__form_title">Заказать <strong>landing page</strong></h3>
             <p class="guarantee__form_desc">и в ближайшее время наши специалисты свяжуться с вами</p>
-            <label><input type="text" placeholder="Ваше имя"></label>
-            <label><input type="email" placeholder="E-mail"></label>
-            <label><input type="tel" placeholder="Номер телефона"></label>
+            <label><input type="text" placeholder="Ваше имя" required></label>
+            <label><input type="email" placeholder="E-mail" required></label>
+            <label><input type="tel" placeholder="Номер телефона" required></label>
             <label><textarea placeholder="Особые пожелания"></textarea></label>
             <span class="guarantee__form_terms">
                 Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с
@@ -995,9 +995,9 @@
     </div>
     <form class="gifts__form">
         <div class="container">
-            <label><input type="text" placeholder="Ваше имя"></label>
-            <label><input type="email" placeholder="E-mail"></label>
-            <label><input type="tel" placeholder="Номер телефона"></label>
+            <label><input type="text" placeholder="Ваше имя" required></label>
+            <label><input type="email" placeholder="E-mail" required></label>
+            <label><input type="tel" placeholder="Номер телефона" required></label>
             <button class="gifts__submit">Заказать</button>
             <span class="gifts__terms">
                 Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с
@@ -1155,11 +1155,12 @@
 
 <!-- start modals.html-->
 <div class="modal modal-request">
+    <button class="modal__close"></button>
     <h2 class="modal__title">Оставьте заявку на <strong>бесплатную консультацию</strong></h2>
     <p class="modal__subtitle">и получите конкретную стратегию привлечения клиентов под ваш бюджет</p>
     <form class="modal-request__form">
-        <label><input type="text" placeholder="Ваше имя" class="modal-request__name"></label>
-        <label><input type="tel" placeholder="Номер телефона" class="modal-request__phone"></label>
+        <label><input type="text" placeholder="Ваше имя" required class="modal-request__name"></label>
+        <label><input type="tel" placeholder="Номер телефона" required class="modal-request__phone"></label>
         <button class="modal__submit">Заказать</button>
     </form>
     <span class="modal__terms">
@@ -1169,12 +1170,13 @@
 </div>
 
 <div class="modal modal-question">
+    <button class="modal__close"></button>
     <h2 class="modal__title">Хотите <strong>задать вопрос?</strong></h2>
     <p class="modal__subtitle">Заполните поля и получите развернутый ответ от наших специалистов</p>
     <form class="modal-question__form">
-        <label><input type="text" placeholder="Ваше имя" class="modal-question__name"></label>
-        <label><input type="tel" placeholder="Номер телефона" class="modal-question__phone"></label>
-        <label><input type="text" placeholder="Ваш вопрос" class="modal-question__text"></label>
+        <label><input type="text" placeholder="Ваше имя" required class="modal-question__name"></label>
+        <label><input type="tel" placeholder="Номер телефона" required class="modal-question__phone"></label>
+        <label><input type="text" placeholder="Ваш вопрос" required class="modal-question__text"></label>
         <button class="modal__submit">Задать вопрос</button>
     </form>
     <span class="modal__terms">
@@ -1184,6 +1186,7 @@
 </div>
 
 <div class="modal modal-thanks">
+    <button class="modal__close"></button>
     <img class="modal__title-img" src="./img/icons/Check.svg" alt="check">
     <h2 class="modal__title"><strong>Спасибо, мы приняли Вашу заявку!</strong></h2>
     <p class="modal__subtitle">Специалист перезвонит вам в ближайшее время и ответит на Ваши вопросы</p>

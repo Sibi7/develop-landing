@@ -85,6 +85,10 @@ button {
   overflow: hidden;
 }
 
+input.invalid {
+  border-color: red!important;
+}
+
 
 
 @import "media"; // Always at the end
