@@ -49,11 +49,17 @@
             <a href="#portfolio" class="menu__link navigation__link">Портфолио</a>
             <a href="#prices" class="menu__link navigation__link">Стоимость</a>
             <a href="#guarantee" class="menu__link navigation__link">Гарантии</a>
+            <a href="#footer" class="menu__link navigation__link hidden-d">Контакты</a>
             <button class="menu__close"></button>
         </div>
     </div>
+    <span class="menu__contacts">
+        <span>+7 770 700 07 70</span>
+        <span>+7 727 727 72 72</span>
+    </span>
     <button class="menu__btn"><span></span></button>
 </nav>
+<div class="menu__clearfix"></div>
 
 <!-- end menu.html-->
 
@@ -788,7 +794,7 @@
             </span>
             <button class="reviews__next"><img src="./img/icons/arrow-to-right-grey.png" alt="arrow"></button>
         </div>
-        <button class="reviews__btn">Оставить отзыв</button>
+        <button class="reviews__btn open-modal-btn" data-modal="review">Оставить отзыв</button>
     </div>
     <div class="reviews__dots"></div>
     <div class="reviews__dots right"></div>
@@ -826,7 +832,7 @@
                         <li>Анализ ниши</li>
                     </ul>
                     <p class="cost-services__price">249 999 <span class="tenge"></span></p>
-                    <a href="#" class="cost-services__order">Заказать</a>
+                    <a href="#" class="cost-services__order open-modal-btn" data-modal="request-price">Заказать</a>
                 </div>
                 <div class="cost-services__item">
                     <span class="cost-services__text">Когда нужен лендинг и ничего лишнего</span>
@@ -841,7 +847,7 @@
                         <li>Анализ ниши</li>
                     </ul>
                     <p class="cost-services__price">249 999 <span class="tenge"></span></p>
-                    <a href="#" class="cost-services__order">Заказать</a>
+                    <a href="#" class="cost-services__order open-modal-btn" data-modal="request-price">Заказать</a>
                 </div>
                 <div class="cost-services__item">
                     <span class="cost-services__text">Когда нужен лендинг и ничего лишнего</span>
@@ -856,7 +862,7 @@
                         <li>Анализ ниши</li>
                     </ul>
                     <p class="cost-services__price">249 999 <span class="tenge"></span></p>
-                    <a href="#" class="cost-services__order">Заказать</a>
+                    <a href="#" class="cost-services__order open-modal-btn" data-modal="request-price">Заказать</a>
                 </div>
                 <div class="cost-services__item">
                     <span class="cost-services__text">Когда нужен лендинг и ничего лишнего</span>
@@ -871,7 +877,7 @@
                         <li>Анализ ниши</li>
                     </ul>
                     <p class="cost-services__price">249 999 <span class="tenge"></span></p>
-                    <a href="#" class="cost-services__order">Заказать</a>
+                    <a href="#" class="cost-services__order open-modal-btn" data-modal="request-price">Заказать</a>
                 </div>
                 <div class="cost-services__conditions">
                     <a href="#two">Ознакомиться с тарифами на разработку сайтов, на основе готовых шаблонов</a>
@@ -891,7 +897,7 @@
                         <li>Анализ ниши</li>
                     </ul>
                     <p class="cost-services__price">249 999 <span class="tenge"></span></p>
-                    <a href="#" class="cost-services__order">Заказать</a>
+                    <a href="#" class="cost-services__order  open-modal-btn" data-modal="request-price">Заказать</a>
                 </div>
                 <div class="cost-services__item">
                     <span class="cost-services__text">Когда нужен лендинг и ничего лишнего</span>
@@ -906,7 +912,7 @@
                         <li>Анализ ниши</li>
                     </ul>
                     <p class="cost-services__price">249 999 <span class="tenge"></span></p>
-                    <a href="#" class="cost-services__order">Заказать</a>
+                    <a href="#" class="cost-services__order open-modal-btn" data-modal="request-price">Заказать</a>
                 </div>
                 <div class="cost-services__item">
                     <span class="cost-services__text">Когда нужен лендинг и ничего лишнего</span>
@@ -921,7 +927,7 @@
                         <li>Анализ ниши</li>
                     </ul>
                     <p class="cost-services__price">249 999 <span class="tenge"></span></p>
-                    <a href="#" class="cost-services__order">Заказать</a>
+                    <a href="#" class="cost-services__order open-modal-btn" data-modal="request-price">Заказать</a>
                 </div>
                 <div class="cost-services__item">
                     <span class="cost-services__text">Когда нужен лендинг и ничего лишнего</span>
@@ -936,7 +942,7 @@
                         <li>Анализ ниши</li>
                     </ul>
                     <p class="cost-services__price">249 999 <i class="tenge"></i></p>
-                    <a href="#" class="cost-services__order">Заказать</a>
+                    <a href="#" class="cost-services__order open-modal-btn" data-modal="request-price">Заказать</a>
                 </div>
                 <div class="cost-services__conditions">
                     <a href="#one"> Ознакомиться с тарифами на разработку уникальных сайтов</a>
@@ -1105,17 +1111,18 @@
 <!-- end additional-services.html-->
 
 <!-- start footer.html-->
-<footer class="footer">
+<footer class="footer" id="footer">
     <div class="container">
         <div class="footer__contacts">
             <h2 class="footer__title">Контакты</h2>
-            <img src="./img/footer/logo-black.png" alt="logo" class="footer__logo">
+            <img src="./img/icons/logo_footer.svg" alt="logo" class="footer__logo">
             <span class="footer__address">Темирязева 42 к15\108 Офис 308</span>
             <span class="footer__phone">+ 7 707 707 70 07</span>
             <span class="footer__phone">+ 7 727 727 72 72 </span>
             <span class="footer__email">info@rock-marketing.kz</span>
             <a href="#" class="footer__messanger">
-                <img src="./img/footer/whats-app.png" alt="whatsup">
+                <img src="./img/icons/whatsapp.svg" alt="whatsup">
+                Whats app
             </a>
         </div>
         <div class="footer__wrap">
@@ -1135,7 +1142,8 @@
             </ul>
             <div class="footer__cards">
                 <h4 class="footer__cards_title">Мы принимаем:</h4>
-                <img src="./img/footer/payment.png" alt="cards">
+                <img src="./img/icons/mastercard.svg" alt="cards">
+                <img src="./img/icons/visa.svg" alt="cards">
             </div>
             <div class="footer__social">
                 <button class="footer__request open-modal-btn" data-modal="request">Заказать обратный звонок</button>
@@ -1169,6 +1177,21 @@
     </span>
 </div>
 
+<div class="modal modal-request-price">
+    <button class="modal__close"></button>
+    <h2 class="modal__title">Оставьте заявку на <strong>заказ услуги</strong></h2>
+    <p class="modal__subtitle">и получите конкретную стратегию привлечения клиентов под ваш бюджет</p>
+    <form class="modal-request-price__form">
+        <label><input type="text" placeholder="Ваше имя" required class="modal-request__name"></label>
+        <label><input type="tel" placeholder="Номер телефона" required class="modal-request__phone"></label>
+        <button class="modal__submit">Заказать</button>
+    </form>
+    <span class="modal__terms">
+        Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с
+        <a href="#">Пользовательским соглашением</a>
+    </span>
+</div>
+
 <div class="modal modal-question">
     <button class="modal__close"></button>
     <h2 class="modal__title">Хотите <strong>задать вопрос?</strong></h2>
@@ -1178,6 +1201,21 @@
         <label><input type="tel" placeholder="Номер телефона" required class="modal-question__phone"></label>
         <label><input type="text" placeholder="Ваш вопрос" required class="modal-question__text"></label>
         <button class="modal__submit">Задать вопрос</button>
+    </form>
+    <span class="modal__terms">
+        Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с
+        <a href="#">Пользовательским соглашением</a>
+    </span>
+</div>
+
+<div class="modal modal-review">
+    <button class="modal__close"></button>
+    <h2 class="modal__title">Заполните<strong> все поля!</strong></h2>
+    <form class="modal-review__form">
+        <label><input type="text" placeholder="Ваше имя" required class="modal-review__name"></label>
+        <label><input type="tel" placeholder="Номер телефона" required class="modal-review__phone"></label>
+        <label><input type="text" placeholder="Ваш вопрос" required class="modal-review__text"></label>
+        <button class="modal__submit">Оставить отзыв</button>
     </form>
     <span class="modal__terms">
         Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с

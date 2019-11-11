@@ -69,6 +69,8 @@
   }
 
   &__form {
+    position: relative;
+    z-index: 1;
     margin-bottom: 30px;
     display: flex;
     align-items: center;
@@ -184,8 +186,15 @@
       line-height: 1;
       letter-spacing: 3.9px;
       @include media-breakpoint-down(md) {
+        display: flex;
+        align-items: flex-end;
         font-size: 76px;
         letter-spacing: 1.8px;
+      }
+      .js-counter-money-t {
+        @include media-breakpoint-down(md) {
+          margin-right: 15px;
+        }
       }
       &_tenge {
         position: absolute;
@@ -193,9 +202,11 @@
         width: 35px;
         bottom: 15px;
         margin-left: 20px;
-        background: url("../img/icons/tenge-hover.png") no-repeat center center;
+        background: url("../img/icons/tenge-w.svg") no-repeat center center;
         background-size: contain;
         @include media-breakpoint-down(md) {
+          display: block;
+          position: relative;
           bottom: 8px;
           margin-left: 8px;
         }
@@ -208,8 +219,11 @@
     position: absolute;
     left: 940px;
     top: 23px;
+    @media (max-width: 1500px) {
+      left: 795px;
+    }
     @include media-breakpoint-down(lg) {
-      left: 844px;
+      left: 685px;
       top: 4px;
     }
     @include media-breakpoint-down(md) {

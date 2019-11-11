@@ -40,7 +40,7 @@
     display: inline-flex;
     height: rem(8);
     width: rem(12);
-    background: url("../img/add-services/arrow-right-w.png") no-repeat center;
+    background: url("../img/icons/arrow-w.svg") no-repeat center;
     background-size: contain;
   }
 
@@ -113,7 +113,7 @@
       }
 
       .add-services__arrow {
-        background-image: url("../img/add-services/arrow-right-b.png");
+        background-image: url("../img/icons/arrow-b.svg");
       }
     }
 

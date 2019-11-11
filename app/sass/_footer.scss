@@ -92,11 +92,22 @@
     }
   }
   &__messanger {
+    display: flex;
+    width: 100%;
+    align-items: center;
     margin-top: auto;
+    font-family: 'MullerMedium', serif;
+    color: #64b161;
+    &:visited {
+      color: #64b161;
+    }
     @include media-breakpoint-down(md) {
+      justify-content: center;
       margin-bottom: 20px;
     }
     img {
+      margin-right: 10px;
+      flex-shrink: 0;
       height: 43px;
       object-fit: contain;
     }
@@ -176,6 +187,7 @@
     @media (max-width: 800px) {
       align-self: center;
       margin-bottom: 15px;
+      justify-content: center;
       order: 1;
     }
     &_title {
@@ -185,7 +197,9 @@
       margin-bottom: 15px;
     }
     img {
-      height: 29px;
+      height: 34px;
+      width: 54px;
+      transform: scale(1.6);
       &:not(:last-of-type) {
         margin-right: 5px;
       }

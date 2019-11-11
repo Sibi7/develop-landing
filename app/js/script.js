@@ -38,8 +38,8 @@ function reviewsSliderInit() {
     var $slidesCount = $('.reviews__amount');
     //
     $slickElement.on('init reInit afterChange', function (event, slick, currentSlide) {
-        var i = 0
-        if (window.innerWidth > 991) {
+        var i = 0;
+        if (window.innerWidth > 980) {
             i = (currentSlide ? currentSlide : 0) + 2;
         } else {
             i = (currentSlide ? currentSlide : 0) + 1;
@@ -111,15 +111,17 @@ function overlayClickInit() {
 }
 
 function showModalInit() {
-    $(document).on('click', '.open-modal-btn', function () {
+    $(document).on('click', '.open-modal-btn', function (e) {
+        e.preventDefault();
+
         var modalName = $(this).attr('data-modal');
         $('.modal-' + modalName).addClass('modal--visible');
+        $('body').addClass('overlay__modal');
         showOverlay();
     });
 
     $(document).on('click', '.modal__close', function () {
-        $('.modal').removeClass('modal--visible');
-        hideOverlay();
+        hideModal();
     })
 }
 
@@ -133,6 +135,7 @@ function hideOverlay() {
 
 function hideModal() {
     $('.modal').removeClass('modal--visible');
+    $('body').removeClass('overlay__modal');
     hideOverlay();
 }
 
@@ -150,8 +153,10 @@ function tabsInit() {
         var hrefTab = $(this).attr('href');
         hrefLink.each(function () {
             var thisHrefheaderLink = $(this).find('a');
-            if (thisHrefheaderLink.attr('href') === hrefTab){
-                $(this).find('a').addClass('active')
+            if (thisHrefheaderLink.attr('href') === hrefTab) {
+                $(this).find('a').addClass('active');
+                var top = $('#prices').offset().top;
+                $('body,html').animate({scrollTop: top}, 1000);
             }
         });
         return false;
@@ -257,11 +262,6 @@ $(function () {
     if (window.innerWidth < 1200) {
         reviewsSliderInit();
     }
-
 });
 
-window.onresize = function () {
-    if (window.innerWidth < 1200) {
-        reviewsSliderInit();
-    }
-};
+

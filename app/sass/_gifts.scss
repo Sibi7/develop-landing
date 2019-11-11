@@ -96,6 +96,10 @@
       font-size: 14px;
       max-width: 100px;
     }
+    @media (max-width: 400px) {
+      font-size: 12px;
+      max-width: 90px;
+    }
     &:hover {
       img {
         transform: scale(1.1);
@@ -225,9 +229,10 @@
     width: 280px;
     left: 1048px;
     @media (max-width: 1700px) {
-      left: 810px;
+      left: 750px;
+      z-index: -1;
     }
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
       display: none;
     }
   }

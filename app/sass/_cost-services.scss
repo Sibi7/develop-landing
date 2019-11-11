@@ -128,7 +128,7 @@
     flex-direction: column;
     justify-content: center;
     padding: rem(45);
-    margin: 0 rem(18);
+    margin: 0 rem(18) 30px;
     align-items: center;
     text-align: center;
     box-shadow: 0 0 95px rgba(60, 60, 60, 0.1);
@@ -263,6 +263,7 @@
   }
 
   &__conditions {
+    width: 100%;
     margin: rem(70);
     text-align: center;
     @include media-breakpoint-down(sm) {
@@ -353,7 +354,7 @@
   width: rem(20);
   height: rem(20);
   transition: 200ms ease;
-  background: url("../img/icons/tenge.png") no-repeat center;
+  background: url("../img/icons/tenge.svg") no-repeat center;
   background-size: contain;
 }
 

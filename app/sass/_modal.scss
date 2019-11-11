@@ -65,6 +65,7 @@
     padding: 0 50px;
     min-width: 230px;
     height: 67px;
+    font-size: 16px;
     border-radius: 33px;
     font-family: 'MullerExtraBold', serif;
     background-color: #262626;
@@ -128,7 +129,7 @@
     }
   }
 
-  &-question {
+  &-question, &-review {
     &__form {
       display: flex;
       justify-content: space-between;
@@ -167,6 +168,21 @@
       }
     }
   }
+  &-request-price {
+    &__form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include media-breakpoint-down(md) {
+        flex-direction: column;
+      }
+    }
+    label {
+      @include media-breakpoint-down(md) {
+        margin-bottom: 10px;
+      }
+    }
+  }
   &__close {
     padding: 0;
     position: absolute;
@@ -195,4 +211,7 @@
 }
 .overlay {
   display: block;
+  .overlay__modal & {
+    z-index: 6;
+  }
 }

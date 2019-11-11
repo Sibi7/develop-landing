@@ -3,17 +3,28 @@
     margin-top: 16px;
   }
   @include media-breakpoint-down(md) {
-    margin-top: 0;
-    padding-top: 10px;
+    position: fixed;
+    z-index: 6;
+    margin: 0;
+    padding: 5px 20px;
+    width: 100%;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #1d1b1e;
+  }
+  @media (max-width: 420px) {
+    padding: 5px 15px;
   }
 
   &__wrap {
+    @include media-breakpoint-up(lg) {
+      display: block!important;
+     }
     @include media-breakpoint-down(md) {
        display: none;
-       z-index: 6;
+       z-index: 7;
        position: fixed;
        left: 0;
        right: 0;
@@ -44,6 +55,7 @@
     width: 176px;
     height: 116px;
     order: 4;
+    flex-shrink: 0;
     @include media-breakpoint-down(lg) {
       height: 95px;
       object-fit: contain;
@@ -60,8 +72,13 @@
       width: 96px;
       height: 67px;
       padding-top: 7px;
+      flex-shrink: 0;
       @include media-breakpoint-down(md) {
         display: block;
+      }
+      @media (max-width: 420px) {
+        width: 80px;
+        height: 60px;
       }
     }
   }
@@ -97,9 +114,20 @@
     &:nth-of-type(6) {
       order: 7;
     }
+    &:nth-of-type(7) {
+      order: 8;
+    }
+
+    &.hidden-d {
+      display: none;
+      @include media-breakpoint-down(md) {
+        display: block;
+      }
+    }
   }
 
   &__btn {
+    flex-shrink: 0;
     position: relative;
     display: none;
     flex-direction: column;
@@ -154,4 +182,32 @@
       transform: translate(-50%, -50%) rotate(45deg);
     }
   }
+  &__clearfix {
+    display: none;
+    padding-bottom: 77px;
+    @include media-breakpoint-down(md) {
+      display: block;
+    }
   }
+
+  &__contacts {
+    padding: 0 10px;
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    color: #fff;
+    line-height: 1.2;
+    span:first-of-type {
+      margin-right: 10px;
+    }
+    @include media-breakpoint-down(md) {
+      display: flex;
+    }
+    @media (max-width: 420px) {
+      flex-direction: column;
+      font-size: 14px;
+    }
+  }
+}
